@@ -26,7 +26,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="overflow-y-auto overflow-x-hidden pt-16 sm:min-w-[640px]"
+        className="overflow-y-auto overflow-x-hidden pt-16 sm:min-w-[500px]"
       >
         {(isAnyCatOpen || isAnyTypeOpen) && (
           <div className="absolute left-4 top-4">
@@ -42,69 +42,60 @@ const MobileNav = () => {
             </Button>
           </div>
         )}
-        <Separator className="mb-4" />
-        <div className="h-[180px] overflow-hidden">
-          {DATA.map((data) => {
-            const handleCatOpen = () => setActiveCatIndex(data.id);
-            const isCatOpen = data.id === activeCatIndex;
+        <div className="my-2">
+          <Separator />
+          <ScrollArea className="h-[200px]">
+            {DATA.map((data) => {
+              const handleCatOpen = () => setActiveCatIndex(data.id);
+              const isCatOpen = data.id === activeCatIndex;
 
-            return (
-              <div key={data.id}>
-                <div
-                  className={`${isAnyCatOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : "opacity-100"} 
-                   grid duration-300 ease-out`}
-                >
+              return (
+                <div key={data.id}>
                   <div
-                    onClick={handleCatOpen}
-                    className={`${buttonVariants({ variant: "link" })} w-full cursor-pointer py-8`}
+                    className={`${isAnyCatOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : "opacity-100"} 
+                   grid duration-300 ease-out`}
                   >
-                    <div className="flex w-full items-center justify-between gap-2">
-                      <div className="text-lg">{data.category}</div>
-                      <ChevronRight size={20} />
+                    <div
+                      onClick={handleCatOpen}
+                      className={`${buttonVariants({ variant: "link" })} my-1 cursor-pointer`}
+                    >
+                      <div className="flex w-full items-center justify-between">
+                        <div className="text-lg">{data.category}</div>
+                        <ChevronRight size={20} />
+                      </div>
                     </div>
                   </div>
-                </div>
+                  {data.featured?.map((product_type) => {
+                    const handleTypeOpen = () =>
+                      setActiveTypeIndex(product_type.id);
+                    const isTypeOpen = product_type.id === activeTypeIndex;
 
-                {isCatOpen && (
-                  <div className="mb-2 flex w-full justify-center text-xs font-bold">
-                    {data.category}
-                  </div>
-                )}
-
-                {data.featured.map((product_type) => {
-                  const handleTypeOpen = () =>
-                    setActiveTypeIndex(product_type.id);
-                  const isTypeOpen = product_type.id === activeTypeIndex;
-
-                  return (
-                    <div key={product_type.id}>
-                      <div
-                        className={`grid duration-300 ease-out 
-                          ${isCatOpen ? "opacity-100" : "h-0 translate-x-[calc(100%+10rem)] opacity-0"}
-                          ${isAnyTypeOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : ""}
-                          `}
-                      >
+                    return (
+                      <div key={product_type.id}>
                         <div
-                          onClick={handleTypeOpen}
-                          className={`${buttonVariants({ variant: "link" })} w-full cursor-pointer py-8`}
+                          className={`grid duration-300 ease-out 
+                          ${isCatOpen ? "opacity-100" : "h-0 translate-x-[calc(100%+10rem)] opacity-0"}
+                          ${isAnyTypeOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : null}
+                          `}
                         >
-                          <div className="flex w-full items-center justify-between">
-                            <div className="text-lg">{product_type.type}</div>
-                            <ChevronRight size={20} />
+                          <div
+                            onClick={handleTypeOpen}
+                            className={`${buttonVariants({ variant: "link" })} my-1 cursor-pointer`}
+                          >
+                            <div className="flex w-full items-center justify-between">
+                              <div className="text-lg">{product_type.type}</div>
+                              <ChevronRight size={20} />
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      {product_type.items.map((product) => (
-                        <div key={product.id}>
-                          <div
-                            className={`duration-300 ease-out
+                        {product_type.items.map((product) => (
+                          <div key={product.id}>
+                            <Link href={`${product_type.href}/${product.kind}`}>
+                              <div
+                                className={`duration-300 ease-out 
                                 ${isTypeOpen ? "opacity-100" : "h-0 translate-x-[calc(100%+10rem)] opacity-0"}
                                 `}
-                          >
-                            <ScrollArea className="h-[180px]">
-                              <Link
-                                href={`/products/${data.value}/${product_type.value}/${product.brand}-${product.name}`}
                               >
                                 <div
                                   className={buttonVariants({
@@ -112,25 +103,25 @@ const MobileNav = () => {
                                   })}
                                 >
                                   <div className="text-base">
-                                    {product.name}
+                                    {product.kind}
                                   </div>
                                 </div>
-                              </Link>
-                            </ScrollArea>
+                              </div>
+                            </Link>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
+                        ))}
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </ScrollArea>
+          <Separator />
         </div>
         <SheetFooter>
-          <div className="flex w-full flex-col items-center py-8 text-center">
-            <Separator />
-            <div className="py-2 text-lg font-bold">Pinarello DOGMA X</div>
+          <div className="my-2 flex w-full flex-col items-center text-center">
+            <div className="text-lg font-bold">Pinarello DOGMA X</div>
             <div>Bike of the champions</div>
             <Link href="/products/bikes/road/PINARELLO-DOGMA X">
               <div className="my-6 transition-all hover:scale-105">

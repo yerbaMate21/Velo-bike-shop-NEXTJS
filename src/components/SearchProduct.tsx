@@ -16,7 +16,7 @@ const SearchProduct = () => {
       >
         <Search />
       </SheetTrigger>
-      <SheetContent className="sm:min-w-[640px]">
+      <SheetContent className="sm:min-w-[500px]">
         <SheetHeader>
           <SheetTitle>Search Product</SheetTitle>
         </SheetHeader>

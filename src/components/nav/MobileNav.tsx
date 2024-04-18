@@ -44,7 +44,7 @@ const MobileNav = () => {
         )}
         <div className="my-2">
           <Separator />
-          <ScrollArea className="h-[200px]">
+          <ScrollArea className="my-1 h-[192px]">
             {DATA.map((data) => {
               const handleCatOpen = () => setActiveCatIndex(data.id);
               const isCatOpen = data.id === activeCatIndex;
@@ -55,15 +55,27 @@ const MobileNav = () => {
                     className={`${isAnyCatOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : "opacity-100"} 
                    grid duration-300 ease-out`}
                   >
-                    <div
-                      onClick={handleCatOpen}
-                      className={`${buttonVariants({ variant: "link" })} my-1 cursor-pointer`}
-                    >
-                      <div className="flex w-full items-center justify-between">
-                        <div className="text-lg">{data.category}</div>
-                        <ChevronRight size={20} />
+                    {data.isNested ? (
+                      <div
+                        onClick={handleCatOpen}
+                        className={`${buttonVariants({ variant: "ghost" })} mr-4 cursor-pointer py-8`}
+                      >
+                        <div className="flex w-full items-center justify-between">
+                          <div className="text-lg">{data.category}</div>
+                          <ChevronRight size={20} />
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <Link href={`/products/${data.value}`}>
+                        <div
+                          className={`${buttonVariants({ variant: "link" })} mr-4 w-full py-8`}
+                        >
+                          <div className="flex w-full text-left text-lg">
+                            {data.category}
+                          </div>
+                        </div>
+                      </Link>
+                    )}
                   </div>
                   {data.featured?.map((product_type) => {
                     const handleTypeOpen = () =>
@@ -80,7 +92,7 @@ const MobileNav = () => {
                         >
                           <div
                             onClick={handleTypeOpen}
-                            className={`${buttonVariants({ variant: "link" })} my-1 cursor-pointer`}
+                            className={`${buttonVariants({ variant: "ghost" })} mr-4 cursor-pointer py-8`}
                           >
                             <div className="flex w-full items-center justify-between">
                               <div className="text-lg">{product_type.type}</div>

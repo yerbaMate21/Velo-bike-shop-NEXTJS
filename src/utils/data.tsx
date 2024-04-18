@@ -5,6 +5,7 @@ export const DATA = [
     category: "Bikes",
     value: "bikes" as const,
     id: uuidv4(),
+    isNested: true,
     featured: [
       {
         type: "Road",
@@ -908,6 +909,7 @@ export const DATA = [
     category: "Framesets",
     value: "framesets" as const,
     id: uuidv4(),
+    isNested: true,
     featured: [
       {
         type: "Race",
@@ -1007,6 +1009,21 @@ export const DATA = [
         href: `/products/framesets/triathlon`,
         items: [
           {
+            brand: "Factor",
+            kind: "Factor",
+            id: uuidv4(),
+            models: [
+              {
+                name: "Slick triathlon v2",
+                id: uuidv4(),
+                price: "6 599",
+                images: [
+                  "https://www.trifanatics.es/productosdata/Israel_Start_Up_Nation_Slick_Disc_Frame_set_180.jpg",
+                ],
+              },
+            ],
+          },
+          {
             brand: "Look",
             kind: "Look",
             id: uuidv4(),
@@ -1037,12 +1054,25 @@ export const DATA = [
     category: "Wheels",
     value: "wheels" as const,
     id: uuidv4(),
+    isNested: false,
     featured: [
       {
-        type: "Road",
-        value: "road" as const,
+        type: "Flat Routes",
+        value: "flat-routes" as const,
         id: uuidv4(),
-        href: `/products/wheels`,
+        href: `/products/wheels/flat-routes`,
+        items: [
+          {
+            kind: "Flat Routes",
+            id: uuidv4(),
+          },
+        ],
+      },
+      {
+        type: "Mountain Routes",
+        value: "mountain-routes" as const,
+        id: uuidv4(),
+        href: `/products/wheels/mountain-routes`,
         items: [
           {
             kind: "Mountain Routes",

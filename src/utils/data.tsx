@@ -1065,6 +1065,59 @@ export const DATA = [
           {
             kind: "Flat Routes",
             id: uuidv4(),
+            models: [
+              {
+                kind: "Flat Routes",
+                id: uuidv4(),
+                models: [
+                  {
+                    brand: "Campagnolo",
+                    name: "Bora Ultra WTO 80mm",
+                    id: uuidv4(),
+                    price: "4 999",
+                    images: [
+                      "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-80mm-disc-set-957560_1220x_crop_center.png?v=1713366717",
+                    ],
+                  },
+                  {
+                    brand: "Campagnolo",
+                    name: "Ghibli Lenticular Fixed",
+                    id: uuidv4(),
+                    price: "4 199",
+                    images: [
+                      "https://bike-room.com/cdn/shop/files/campagnolo-ghibli-lenticular-fixed-rear-310870_1220x_crop_center.png?v=1713366717",
+                    ],
+                  },
+                  {
+                    brand: "DT Swiss",
+                    name: "ARC 1100 DICUT 80mm",
+                    id: uuidv4(),
+                    price: "1 299",
+                    images: [
+                      "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-80mm-rim-rear-778309_1220x_crop_center.jpg?v=1713366941",
+                    ],
+                  },
+                  {
+                    brand: "DT Swiss",
+                    name: "ARC 1100 DICUT Lenticular",
+                    id: uuidv4(),
+                    price: "2 199",
+                    images: [
+                      "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-lenticular-disc-rear-211971_1220x_crop_center.jpg?v=1713366941",
+                    ],
+                  },
+                  {
+                    brand: "Campagnolo",
+                    name: "Bora Ultra TT Lenticular",
+                    id: uuidv4(),
+                    price: "3 899",
+                    images: [
+                      "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-tt-lenticular-rim-rear-692116_1220x_crop_center.png?v=1713366715",
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
@@ -1139,57 +1192,6 @@ export const DATA = [
                 price: "999",
                 images: [
                   "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-48mm-rim-front-270658_1220x_crop_center.jpg?v=1713366938",
-                ],
-              },
-            ],
-          },
-          {
-            kind: "Flat Routes",
-            id: uuidv4(),
-            models: [
-              {
-                brand: "Campagnolo",
-                name: "Bora Ultra WTO 80mm",
-                id: uuidv4(),
-                price: "4 999",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-80mm-disc-set-957560_1220x_crop_center.png?v=1713366717",
-                ],
-              },
-              {
-                brand: "Campagnolo",
-                name: "Ghibli Lenticular Fixed",
-                id: uuidv4(),
-                price: "4 199",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-ghibli-lenticular-fixed-rear-310870_1220x_crop_center.png?v=1713366717",
-                ],
-              },
-              {
-                brand: "DT Swiss",
-                name: "ARC 1100 DICUT 80mm",
-                id: uuidv4(),
-                price: "1 299",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-80mm-rim-rear-778309_1220x_crop_center.jpg?v=1713366941",
-                ],
-              },
-              {
-                brand: "DT Swiss",
-                name: "ARC 1100 DICUT Lenticular",
-                id: uuidv4(),
-                price: "2 199",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-lenticular-disc-rear-211971_1220x_crop_center.jpg?v=1713366941",
-                ],
-              },
-              {
-                brand: "Campagnolo",
-                name: "Bora Ultra TT Lenticular",
-                id: uuidv4(),
-                price: "3 899",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-tt-lenticular-rim-rear-692116_1220x_crop_center.png?v=1713366715",
                 ],
               },
             ],

@@ -9,6 +9,8 @@ const nextConfig = {
       "images.pexels.com",
       "images.squarespace-cdn.com",
       "i.pinimg.com",
+      "pinarello.com",
+      "bike-room.com",
     ],
   },
 };

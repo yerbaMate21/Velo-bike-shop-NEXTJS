@@ -56,7 +56,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="hidden items-center xl:flex">
+            <div className="hidden items-center sm:flex">
               <NavItems />
             </div>
 

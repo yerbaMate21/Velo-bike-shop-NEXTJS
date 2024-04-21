@@ -44,7 +44,7 @@ const MobileNav = () => {
         )}
         <div className="my-2">
           <Separator />
-          <ScrollArea className="my-1 h-[192px]">
+          <ScrollArea className="h-[192px]">
             {DATA.map((data) => {
               const handleCatOpen = () => setActiveCatIndex(data.id);
               const isCatOpen = data.id === activeCatIndex;
@@ -68,7 +68,8 @@ const MobileNav = () => {
                     ) : (
                       <Link href={`/products/${data.value}`}>
                         <div
-                          className={`${buttonVariants({ variant: "link" })} mr-4 w-full py-8`}
+                          className={`${buttonVariants({ variant: "link" })} 
+                          my-2 w-full`}
                         >
                           <div className="flex w-full text-left text-lg">
                             {data.category}
@@ -105,16 +106,17 @@ const MobileNav = () => {
                           <div key={product.id}>
                             <Link href={`${product_type.href}/${product.kind}`}>
                               <div
-                                className={`duration-300 ease-out 
+                                className={`mx-4 duration-300 ease-out 
                                 ${isTypeOpen ? "opacity-100" : "h-0 translate-x-[calc(100%+10rem)] opacity-0"}
                                 `}
                               >
                                 <div
-                                  className={buttonVariants({
-                                    variant: "link",
-                                  })}
+                                  className={`${buttonVariants({
+                                    variant: "link-secondary-rose-500",
+                                    size: "no-padding-x",
+                                  })} w-full`}
                                 >
-                                  <div className="text-base">
+                                  <div className="w-full text-base">
                                     {product.kind}
                                   </div>
                                 </div>
@@ -147,12 +149,15 @@ const MobileNav = () => {
                 />
               </div>
             </Link>
-            <div>
+            <div className="mb-4">
               <Link
                 href="/products"
-                className={buttonVariants({ variant: "link" })}
+                className={`${buttonVariants({
+                  variant: "link-secondary-rose-500",
+                  size: "no-padding-x",
+                })}`}
               >
-                View All
+                <div className="font-normal">View All</div>
               </Link>
             </div>
           </div>

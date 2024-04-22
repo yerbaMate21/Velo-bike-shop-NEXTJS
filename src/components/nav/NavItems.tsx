@@ -12,6 +12,7 @@ import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { useState } from "react";
 import Image from "next/image";
+import { Separator } from "../ui/separator";
 
 const NavItems = () => {
   let itemsImages: { category: string; src: string }[] = [
@@ -21,11 +22,11 @@ const NavItems = () => {
     },
     {
       category: "framesets",
-      src: "https://bike-room.com/cdn/shop/files/de-rosa-sk-pininfarina-size-46-viviani-edition-frameset-940808_1220x_crop_center.jpg?v=1713366958",
+      src: "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw05a76ce8/images/full/full_2023_/2023/full_2023_3565_ultimate-cfr-disc-frs_P04_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
     },
     {
       category: "wheels",
-      src: "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-80mm-disc-set-957560_1220x_crop_center.png?v=1713366717",
+      src: "https://enve.com/cdn/shop/files/SES_2.3_front_angle.jpg?v=1705021935&width=1800",
     },
     {
       category: "road",
@@ -44,8 +45,8 @@ const NavItems = () => {
       src: "https://images.pexels.com/photos/15021623/pexels-photo-15021623/free-photo-of-mezczyzna-ulica-rower-miejski.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      category: "race",
-      src: "https://images.pexels.com/photos/248559/pexels-photo-248559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "road-frame",
+      src: "https://images.pexels.com/photos/7932160/pexels-photo-7932160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       category: "triathlon",
@@ -62,13 +63,8 @@ const NavItems = () => {
   ];
 
   const [catImage, setCatImage] = useState<string>("");
-  const [typeImage, setTypeImage] = useState<string>(
-    "https://images.pexels.com/photos/17239283/pexels-photo-17239283/free-photo-of-kobiety-sport-usmiechajacy-sie-rowery.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  );
 
   const handleCatImage = (value: string) => {
-    console.log(value);
-
     itemsImages.map((item) => {
       if (item.category === value) {
         setCatImage(item.src);
@@ -82,11 +78,6 @@ const NavItems = () => {
         setCatImage(item.src);
       }
     });
-  };
-  const resetImage = () => {
-    setTypeImage(
-      "https://images.pexels.com/photos/17239283/pexels-photo-17239283/free-photo-of-kobiety-sport-usmiechajacy-sie-rowery.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    );
   };
 
   return (
@@ -104,11 +95,8 @@ const NavItems = () => {
                   {data.category}
                 </div>
               </NavigationMenuTrigger>
-              <NavigationMenuContent
-                className="bg-primary-foreground"
-                onMouseLeave={resetImage}
-              >
-                <div className="m-8 grid h-full w-[800px] grid-cols-[30%_70%] rounded-sm border-[1px]">
+              <NavigationMenuContent className="bg-primary-foreground">
+                <div className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] rounded-sm border-[1px] bg-white">
                   <div className="rounded-bl-sm rounded-tl-sm bg-secondary">
                     {data.featured.map((item) => (
                       <div key={item.id}>
@@ -126,16 +114,17 @@ const NavItems = () => {
                               </div>
                             </div>
                           </Link>
+                          <Separator />
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="relative aspect-video h-full w-full">
+                  <div className="relative h-[340px] w-full">
                     <Image
                       src={catImage}
                       fill
+                      objectFit="cover"
                       alt="navitems-photo"
-                      className="h-full w-full object-cover object-center"
                     />
                   </div>
                 </div>
@@ -158,15 +147,17 @@ const NavItems = () => {
             </NavigationMenuItem>
           </div>
         ))}
-        <Link
-          href="/world-tour"
-          className={buttonVariants({
-            variant: "link-secondary-rose-500",
-            size: "no-padding-x",
-          })}
-        >
-          <div className="text-base font-medium">World Tour</div>
-        </Link>
+        <div className="px-2">
+          <Link
+            href="/world-tour"
+            className={buttonVariants({
+              variant: "link-secondary-rose-500",
+              size: "no-padding-x",
+            })}
+          >
+            <div className="text-base font-medium">World Tour</div>
+          </Link>
+        </div>
       </NavigationMenuList>
     </NavigationMenu>
   );

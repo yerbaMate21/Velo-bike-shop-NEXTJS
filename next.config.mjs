@@ -4,13 +4,17 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      "stormsend1.djicdn.com",
-      "store.dji.com",
-      "images.pexels.com",
       "images.squarespace-cdn.com",
-      "i.pinimg.com",
       "pinarello.com",
-      "bike-room.com",
+      "images.pexels.com",
+      "assets.specialized.com",
+      "www.lookcycle.com",
+      "adfnjoxprq.cloudimg.io",
+      "www.canyon.com",
+      "media.trekbikes.com",
+      "www.dtswiss.com",
+      "enve.com",
+      "www.sram.com",
     ],
   },
 };

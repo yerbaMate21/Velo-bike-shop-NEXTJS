@@ -912,75 +912,85 @@ export const DATA = [
     isNested: true,
     featured: [
       {
-        type: "Race",
-        value: "race" as const,
+        type: "Road",
+        value: "road-frame" as const,
         id: uuidv4(),
-        href: `/products/framesets/race`,
+        href: `/products/framesets/road`,
         items: [
           {
-            brand: "Bianchi",
-            kind: "Bianchi",
+            brand: "Canyon",
+            kind: "Canyon",
             id: uuidv4(),
             models: [
               {
-                name: "Oltre XR4 Frameset 2021",
+                name: "Aeroad CFR",
+                id: uuidv4(),
+                price: "7 199",
+                images: [
+                  "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw3685a031/images/full/full_2023_/2023/full_2023_3943_aeroad-cfr-disc-frs-brake-kit_P10_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
+                ],
+              },
+              {
+                name: "Ultimate CFR Disc",
                 id: uuidv4(),
                 price: "4 099",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/bianchi-oltre-xr4-frameset-2021-753362_1220x_crop_center.jpg?v=1713366086",
+                  "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw2bed72a4/images/full/full_2023_/2023/full_2023_ultimate-cfr-frs_3326_P02_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                 ],
               },
               {
-                name: "Specialissima Disc 2023",
+                name: "Ultimate CFR Alpecin",
                 id: uuidv4(),
-                price: "4 299",
+                price: "6 799",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/bianchi-specialissima-disc-2023-frameset-612212_1220x_crop_center.jpg?v=1713366088",
+                  "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw05a76ce8/images/full/full_2023_/2023/full_2023_3565_ultimate-cfr-disc-frs_P04_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                 ],
               },
             ],
           },
           {
-            brand: "BMC",
-            kind: "BMC",
+            brand: "Specialized",
+            kind: "Specialized",
             id: uuidv4(),
             models: [
               {
-                name: "Teammachine SLR 01",
+                name: "S-Works Diverge STR",
                 id: uuidv4(),
                 price: "4 999",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/bmc-teammachine-slr-01-mod-2024-528542_1220x_crop_center.png?v=1713366632",
+                  "https://assets.specialized.com/i/specialized/76224-00_DIVERGE-STR-SW-FRMSET-DUNEWHT-BRCH-PRL_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
               },
-            ],
-          },
-          {
-            brand: "Cinelli",
-            kind: "Cinelli",
-            id: uuidv4(),
-            models: [
               {
-                name: "XCR Frameset 2024",
+                name: "Allez Sprint",
                 id: uuidv4(),
                 price: "2 999",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/cinelli-xcr-frameset-2024-594224_1220x_crop_center.jpg?v=1713366755",
+                  "https://assets.specialized.com/i/specialized/70024-70_ALLEZ-SPRINT-FRMSET-REDSKY-WHT_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
               },
-            ],
-          },
-          {
-            brand: "De Rosa",
-            kind: "De Rosa",
-            id: uuidv4(),
-            models: [
               {
-                name: "SK Pininfarina",
+                name: "S-Works Tarmac SL8",
+                id: uuidv4(),
+                price: "7 299",
+                images: [
+                  "https://assets.specialized.com/i/specialized/74924-08_TARMAC-SL8-SW-FRMSET-LTD-BORA_HERO?$scom-pdp-product-image$&fmt=auto",
+                ],
+              },
+              {
+                name: "Epic 8 EVO Pro",
                 id: uuidv4(),
                 price: "3 299",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/de-rosa-sk-pininfarina-size-46-viviani-edition-frameset-940808_1220x_crop_center.jpg?v=1713366958",
+                  "https://assets.specialized.com/i/specialized/70324-10_EPIC-PRO-130-FRM-WHT-FOGTNT-SMK_HERO?$scom-pdp-product-image$&fmt=auto",
+                ],
+              },
+              {
+                name: "S-Works Stumpjumper",
+                id: uuidv4(),
+                price: "5 699",
+                images: [
+                  "https://assets.specialized.com/i/specialized/76324-00_SJ-EVO-SW-FRM-SLPHR-BRSYYEL-OLVGRN_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
               },
             ],
@@ -991,11 +1001,34 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "785 Huez Frameset 2022",
+                name: "795 Blade",
                 id: uuidv4(),
-                price: "1 299",
+                price: "4 299",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/look-785-huez-frameset-2022-112137_1220x_crop_center.png?v=1713367057",
+                  "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/795-Blade/Pro-Team/795-Blade-Rs-Pro-Team-Black-Frameset.jpg",
+                ],
+              },
+              {
+                name: "795 Blade Iconic Edition",
+                id: uuidv4(),
+                price: "5 299",
+                images: [
+                  "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/795-Blade/Iconic/795-Blade-Rs-Iconic-Frameset.jpg",
+                ],
+              },
+            ],
+          },
+          {
+            brand: "Lapierre",
+            kind: "Lapierre",
+            id: uuidv4(),
+            models: [
+              {
+                name: "Xelius SL",
+                id: uuidv4(),
+                price: "3 899",
+                images: [
+                  "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/62/b9/39/1687873040/Xelius%20SL%2010.0%20KC%20-%20Lapierre%20x%20Obvious%20MY24%20-%20View%20(3).jpg",
                 ],
               },
             ],
@@ -1008,6 +1041,29 @@ export const DATA = [
         id: uuidv4(),
         href: `/products/framesets/triathlon`,
         items: [
+          {
+            brand: "Trek",
+            kind: "Trek",
+            id: uuidv4(),
+            models: [
+              {
+                name: "Speed Concept SLR",
+                id: uuidv4(),
+                price: "4 599",
+                images: [
+                  "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SpeedConceptSLRFrameset_22_35671_A_Primary",
+                ],
+              },
+              {
+                name: "Speed Concept TT",
+                id: uuidv4(),
+                price: "5 199",
+                images: [
+                  "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SpeedConceptTTFrameset_22_35746_A_Primary",
+                ],
+              },
+            ],
+          },
           {
             brand: "Factor",
             kind: "Factor",
@@ -1029,19 +1085,11 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "796 2023 Monoblade RS",
+                name: "P24",
                 id: uuidv4(),
-                price: "4 999",
+                price: "11 999",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/look-796-2023-monoblade-rs-frameset-carbon-752286_1220x_crop_center.jpg?v=1713367080",
-                ],
-              },
-              {
-                name: "796 Monoblade RS",
-                id: uuidv4(),
-                price: "6 099",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/look-796-monoblade-rs-frameset-2024-189828_1220x_crop_center.jpg?v=1713367057",
+                  "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/look-p24/P24.jpg",
                 ],
               },
             ],
@@ -1071,48 +1119,66 @@ export const DATA = [
                 id: uuidv4(),
                 models: [
                   {
-                    brand: "Campagnolo",
-                    name: "Bora Ultra WTO 80mm",
+                    brand: "Enve",
+                    name: "SES 4.5",
                     id: uuidv4(),
-                    price: "4 999",
+                    price: "1 280",
                     images: [
-                      "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-80mm-disc-set-957560_1220x_crop_center.png?v=1713366717",
+                      "https://enve.com/cdn/shop/files/SES_4.5_front_angle.jpg?v=1704989386&width=1800",
                     ],
                   },
                   {
-                    brand: "Campagnolo",
-                    name: "Ghibli Lenticular Fixed",
+                    brand: "Enve",
+                    name: "65",
                     id: uuidv4(),
-                    price: "4 199",
+                    price: "1 400",
                     images: [
-                      "https://bike-room.com/cdn/shop/files/campagnolo-ghibli-lenticular-fixed-rear-310870_1220x_crop_center.png?v=1713366717",
+                      "https://enve.com/cdn/shop/products/Foundation65_Hero.png?v=1683741465&width=1800",
+                    ],
+                  },
+                  {
+                    brand: "Enve",
+                    name: "SES DISC REAR",
+                    id: uuidv4(),
+                    price: "2 900",
+                    images: [
+                      "https://enve.com/cdn/shop/files/SESDisc_Hero.png?v=1709231344&width=1800",
                     ],
                   },
                   {
                     brand: "DT Swiss",
-                    name: "ARC 1100 DICUT 80mm",
+                    name: "ARC 1100",
                     id: uuidv4(),
-                    price: "1 299",
+                    price: "2 499",
                     images: [
-                      "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-80mm-rim-rear-778309_1220x_crop_center.jpg?v=1713366941",
+                      "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/48/1/PHO_AAOTIX0000A_ARC1100_rimbrake_WEB_SHO_001.jpg",
                     ],
                   },
                   {
                     brand: "DT Swiss",
-                    name: "ARC 1100 DICUT Lenticular",
+                    name: "ARC 1100 Disc",
                     id: uuidv4(),
-                    price: "2 199",
+                    price: "2 399",
                     images: [
-                      "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-lenticular-disc-rear-211971_1220x_crop_center.jpg?v=1713366941",
+                      "https://www.dtswiss.com/itc/00/00/00/00/00/00/00/00/70/00/11/21/0/PHO_WARC110NIDJC010998_WEB_SHO_001.jpg",
                     ],
                   },
                   {
-                    brand: "Campagnolo",
-                    name: "Bora Ultra TT Lenticular",
+                    brand: "Zipp",
+                    name: "858 NSW",
                     id: uuidv4(),
-                    price: "3 899",
+                    price: "2 999",
                     images: [
-                      "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-tt-lenticular-rim-rear-692116_1220x_crop_center.png?v=1713366715",
+                      "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-858-nsw-tl-disc-brake-c1/productassets_wh-858-ntld-c1_fg/wh-858-nsw-tl-dbcl-700f-12x100-std-c1-c-front-s.png?w=800&quality=80&format=webp",
+                    ],
+                  },
+                  {
+                    brand: "Zipp",
+                    name: "Super-9 Clincher",
+                    id: uuidv4(),
+                    price: "3 200",
+                    images: [
+                      "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-sp9-tl-track-b1/productassets_wh-sp9-tltk-b1_fg/wh-sp9-tl-tk-700r-std-a1-f-front-s.png?w=800&quality=80&format=webp",
                     ],
                   },
                 ],
@@ -1132,66 +1198,84 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                brand: "Campagnolo",
-                name: "Bora Ultra WTO 32mm",
+                brand: "Enve",
+                name: "SES 2.3",
+                id: uuidv4(),
+                price: "1 200",
+                images: [
+                  "https://enve.com/cdn/shop/files/SES_2.3_front_angle.jpg?v=1705021935&width=1800",
+                ],
+              },
+              {
+                brand: "Enve",
+                name: "SES 3.4",
+                id: uuidv4(),
+                price: "1 300",
+                images: [
+                  "https://enve.com/cdn/shop/files/SES_3.4_front_angle.jpg?v=1704989297&width=1800",
+                ],
+              },
+              {
+                brand: "Enve",
+                name: "M640",
+                id: uuidv4(),
+                price: "2 500",
+                images: [
+                  "https://enve.com/cdn/shop/files/M630_Side-1024x683_3375a4b8-6260-4361-ade7-aa336c887802.jpg?v=1690914374&width=1800",
+                ],
+              },
+              {
+                brand: "Enve",
+                name: "M735",
+                id: uuidv4(),
+                price: "2 550",
+                images: [
+                  "https://enve.com/cdn/shop/files/M735_Side-1024x683_2f280ec1-359c-45d4-9af8-94e3dcc3930c.jpg?v=1690914420&width=1800",
+                ],
+              },
+              {
+                brand: "DT Swiss",
+                name: "XRC 1200",
                 id: uuidv4(),
                 price: "2 999",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-33mm-disc-set-588297_1220x_crop_center.png?v=1713366717",
-                ],
-              },
-              {
-                brand: "Campagnolo",
-                name: "Bora WTO 45mm",
-                id: uuidv4(),
-                price: "1 980",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-wto-45mm-rim-set-562026_1220x_crop_center.png?v=1713366718",
-                ],
-              },
-              {
-                brand: "Campagnolo",
-                name: "Bora WTO 33mm",
-                id: uuidv4(),
-                price: "2 199",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-wto-33mm-disc-set-301700_1220x_crop_center.png?v=1713366716",
-                ],
-              },
-              {
-                brand: "Campagnolo",
-                name: "Bora Ultra WTO 45mm",
-                id: uuidv4(),
-                price: "3 199",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/campagnolo-bora-ultra-wto-45mm-disc-set-921805_1220x_crop_center.png?v=1713366717",
-                ],
-              },
-              {
-                brand: "Corima",
-                name: "New WS EVO 32mm",
-                id: uuidv4(),
-                price: "1 799",
-                images: [
-                  "https://bike-room.com/cdn/shop/files/corima-new-ws-evo-32mm-28-disc-944409_1220x_crop_center.png?v=1713366756",
+                  "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/47/9/PHO_AAAAKX_XRC1200_WEB_SHO_001.jpg",
                 ],
               },
               {
                 brand: "DT Swiss",
-                name: "ARC 1100 DICUT 48mm",
+                name: "XRC 1501",
                 id: uuidv4(),
-                price: "1 099",
+                price: "2 200",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-48mm-rim-rear-410901_1220x_crop_center.jpg?v=1713366939",
+                  "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/67/2/PHO_AAAAQX_XRC1501_WEB_SHO_001.jpg",
                 ],
               },
               {
-                brand: "DT Swiss",
-                name: "ARC 1100 DICUT 50mm",
+                brand: "Zipp",
+                name: "353 NSW",
+                id: uuidv4(),
+                price: "1 299",
+                images: [
+                  "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-353-nsw-tl-disc-brake-a1/productassets_wh-353-ntld-a1_fg/wh-353-nsw-tl-dbcl-700f-12x100-std-a1-c-side-s.png?w=800&quality=80&format=webp",
+                ],
+              },
+              {
+                brand: "Zipp",
+                name: "1ZERO HITOP SW",
                 id: uuidv4(),
                 price: "999",
                 images: [
-                  "https://bike-room.com/cdn/shop/files/dt-swiss-arc-1100-dicut-48mm-rim-front-270658_1220x_crop_center.jpg?v=1713366938",
+                  "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-1zero-hitop-sw-a1/productassets_wh-1zro-htsw-a1_fg/wh-1zero-hitp-sw-29f-15x110-std-a1-c-side-s.png?w=800&quality=80&format=webp",
+                ],
+              },
+              {
+                brand: "Zipp",
+                name: "1ZERO HITOP S",
+                id: uuidv4(),
+                price: "1 399",
+                images: [
+                  "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-1zero-hitop-s-a1/productassets_wh-1zro-hts-a1_fg/wh-1zero-hitp-s-29f-15x110-std-a1-c-side.png?w=800&quality=80&format=webp",
                 ],
               },
             ],

@@ -1036,10 +1036,10 @@ export const DATA = [
         ],
       },
       {
-        type: "Triathlon",
-        value: "triathlon" as const,
+        type: "Aero",
+        value: "aerodynamic" as const,
         id: uuidv4(),
-        href: `/products/framesets/triathlon`,
+        href: `/products/framesets/aerodynamic`,
         items: [
           {
             brand: "Trek",

@@ -14,54 +14,54 @@ import { useState } from "react";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 
-const NavItems = () => {
-  let itemsImages: { category: string; src: string }[] = [
-    {
-      category: "bikes",
-      src: "https://pinarello.com/storage/Variant/cff22838c3f40059bf83fc0d70bf22e9.png",
-    },
-    {
-      category: "framesets",
-      src: "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw05a76ce8/images/full/full_2023_/2023/full_2023_3565_ultimate-cfr-disc-frs_P04_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
-    },
-    {
-      category: "wheels",
-      src: "https://enve.com/cdn/shop/files/SES_2.3_front_angle.jpg?v=1705021935&width=1800",
-    },
-    {
-      category: "road",
-      src: "https://images.pexels.com/photos/1606616/pexels-photo-1606616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "gravel",
-      src: "https://images.pexels.com/photos/614479/pexels-photo-614479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "mtb",
-      src: "https://images.pexels.com/photos/3967817/pexels-photo-3967817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "e-bike",
-      src: "https://images.pexels.com/photos/15021623/pexels-photo-15021623/free-photo-of-mezczyzna-ulica-rower-miejski.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "road-frame",
-      src: "https://images.pexels.com/photos/7932160/pexels-photo-7932160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "triathlon",
-      src: "https://images.pexels.com/photos/12838/pexels-photo-12838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "flat-routes",
-      src: "https://images.pexels.com/photos/13992748/pexels-photo-13992748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      category: "mountain-routes",
-      src: "https://images.pexels.com/photos/568236/pexels-photo-568236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
+let itemsImages: { category: string; src: string }[] = [
+  {
+    category: "bikes",
+    src: "/images/bikes.png",
+  },
+  {
+    category: "framesets",
+    src: "/images/framesets.webp",
+  },
+  {
+    category: "wheels",
+    src: "/images/wheels.webp",
+  },
+  {
+    category: "road",
+    src: "/images/road.jpeg",
+  },
+  {
+    category: "gravel",
+    src: "/images/gravel.jpeg",
+  },
+  {
+    category: "mtb",
+    src: "/images/mtb.jpeg",
+  },
+  {
+    category: "e-bike",
+    src: "/images/e-bike.webp",
+  },
+  {
+    category: "road-frame",
+    src: "/images/road-frame.avif",
+  },
+  {
+    category: "aerodynamic",
+    src: "/images/aerodynamic.webp",
+  },
+  {
+    category: "flat-routes",
+    src: "/images/flat-routes.avif",
+  },
+  {
+    category: "mountain-routes",
+    src: "/images/mountain-routes.avif",
+  },
+];
 
+const NavItems = () => {
   const [catImage, setCatImage] = useState<string>("");
 
   const handleCatImage = (value: string) => {
@@ -96,7 +96,10 @@ const NavItems = () => {
                 </div>
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-primary-foreground">
-                <div className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] rounded-sm border-[1px] bg-white">
+                <div
+                  className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] 
+                rounded-sm border-[1px] bg-white"
+                >
                   <div className="rounded-bl-sm rounded-tl-sm bg-secondary">
                     {data.featured.map((item) => (
                       <div key={item.id}>
@@ -104,7 +107,7 @@ const NavItems = () => {
                           <Link href={`/products/${data.value}/${item.value}`}>
                             <div
                               className={`${buttonVariants({
-                                variant: "link-secondary-rose-500",
+                                variant: "link-secondary",
                                 size: "no-padding-x",
                               })} my-2 w-full`}
                               onMouseEnter={() => handleTypeImage(item.value)}
@@ -133,13 +136,11 @@ const NavItems = () => {
                   <Link href={`/products/${data.value}`}>
                     <div
                       className={`${buttonVariants({
-                        variant: "link-secondary-rose-500",
+                        variant: "link-secondary",
                         size: "no-padding-x",
                       })} mx-8 mb-8 `}
                     >
-                      <div className="text-base font-light">
-                        View All {data.category}
-                      </div>
+                      <div className="font-light">View All {data.category}</div>
                     </div>
                   </Link>
                 </div>
@@ -151,7 +152,7 @@ const NavItems = () => {
           <Link
             href="/world-tour"
             className={buttonVariants({
-              variant: "link-secondary-rose-500",
+              variant: "link-secondary",
               size: "no-padding-x",
             })}
           >

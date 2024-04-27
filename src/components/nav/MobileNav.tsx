@@ -112,7 +112,7 @@ const MobileNav = () => {
                               >
                                 <div
                                   className={`${buttonVariants({
-                                    variant: "link-secondary-rose-500",
+                                    variant: "link-secondary",
                                     size: "no-padding-x",
                                   })} w-full`}
                                 >
@@ -137,10 +137,10 @@ const MobileNav = () => {
           <div className="my-2 flex w-full flex-col items-center text-center">
             <div className="text-lg font-bold">Pinarello DOGMA X</div>
             <div>Bike of the champions</div>
-            <Link href="/products/bikes/road/PINARELLO-DOGMA X">
+            <Link href="/products/bikes/road/Pinarello/DOGMA X">
               <div className="my-6 transition-all hover:scale-105">
                 <Image
-                  src="https://images.squarespace-cdn.com/content/v1/63ec1e3d4940eb5e2d87d267/74250dc6-0d3c-4956-b365-a644c2cb6563/Bicycle-custom-build-service.jpg"
+                  src="/images/dogma-x.webp"
                   alt="mobiel-nav-photo"
                   width={500}
                   height={500}
@@ -153,7 +153,7 @@ const MobileNav = () => {
               <Link
                 href="/products"
                 className={`${buttonVariants({
-                  variant: "link-secondary-rose-500",
+                  variant: "link-secondary",
                   size: "no-padding-x",
                 })}`}
               >

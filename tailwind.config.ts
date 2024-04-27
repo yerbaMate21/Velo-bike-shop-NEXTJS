@@ -18,10 +18,6 @@ const config = {
       },
     },
     extend: {
-      backgroundImage: {
-        "sign-up-page":
-          "https://images.pexels.com/photos/753873/pexels-photo-753873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

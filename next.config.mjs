@@ -15,6 +15,7 @@ const nextConfig = {
       "www.dtswiss.com",
       "enve.com",
       "www.sram.com",
+      "images.unsplash.com",
     ],
   },
 };

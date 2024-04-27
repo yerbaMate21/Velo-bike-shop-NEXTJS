@@ -8,7 +8,6 @@ import MaxWidthWrapper from "../MaxWidthWrapper";
 import { useEffect, useState } from "react";
 import UserAccountNav from "../UserAccountNav";
 import Cart from "../Cart";
-import logo from "../../public/bike.svg";
 import SearchProduct from "../SearchProduct";
 
 const Navbar = () => {
@@ -37,17 +36,17 @@ const Navbar = () => {
             ${isSearchOpen ? "opacity-0" : "opacity-100 duration-700"} 
             `}
           >
-            <div className="flex items-center gap-4 leading-none">
+            <div className="flex items-center leading-none">
               <MobileNav />
 
               <Link href="/">
                 <div className="flex items-center gap-3">
                   <Image
-                    src={logo}
+                    src="/images/bike.svg"
                     width={50}
                     height={50}
                     alt="logo"
-                    className="min-w-10"
+                    className="mx-1 min-w-10"
                   />
                   <div className="hidden text-2xl font-medium text-slate-800 sm:block">
                     Velo

@@ -6,7 +6,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const Footer = () => {
   return (
-    <footer className="flex-grow-0 bg-orange-300">
+    <footer className="flex-grow-0 bg-zinc-700 text-white">
       <MaxWidthWrapper>
         <div className="py-10 md:flex md:items-center md:justify-between">
           <Image
@@ -17,22 +17,13 @@ const Footer = () => {
           />
           <div className="mt-4 flex items-center justify-center md:mt-0">
             <div className="flex space-x-8">
-              <Link
-                href="#"
-                className="text-sm text-muted-foreground hover:text-gray-600"
-              >
+              <Link href="#" className="text-sm hover:text-gray-600">
                 Terms
               </Link>
-              <Link
-                href="#"
-                className="text-sm text-muted-foreground hover:text-gray-600"
-              >
+              <Link href="#" className="text-sm hover:text-gray-600">
                 Privacy Policy
               </Link>
-              <Link
-                href="#"
-                className="text-sm text-muted-foreground hover:text-gray-600"
-              >
+              <Link href="#" className="text-sm hover:text-gray-600">
                 Cookie Policy
               </Link>
             </div>

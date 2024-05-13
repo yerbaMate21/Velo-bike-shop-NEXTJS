@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 import { cn } from "@/lib/utils";
 import AuthProvider from "@/context/AuthProvider";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
         <AuthProvider>
-          <main className="relative flex min-h-screen flex-col">
+          <main className="relative flex min-h-screen min-w-[300px] flex-col">
             <div className="flex-1 flex-grow">{children}</div>
           </main>
         </AuthProvider>

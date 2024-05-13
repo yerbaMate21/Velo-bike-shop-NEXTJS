@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <div className="sticky z-50 text-sm">
       <div className="w-full bg-white shadow-md">
-        <MaxWidthWrapper>
+        <MaxWidthWrapper className="xl:px-20">
           <div
             className={`flex h-16 w-full justify-between bg-white
             ${isSearchOpen ? "opacity-0" : "opacity-100 duration-700"} 

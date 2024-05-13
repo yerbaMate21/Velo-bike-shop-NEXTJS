@@ -3,15 +3,15 @@ const { v4: uuidv4 } = require("uuid");
 export const DATA = [
   {
     category: "Bikes",
-    value: "bikes" as const,
+    value: "bikes",
     id: uuidv4(),
     isNested: true,
     featured: [
       {
         type: "Road",
-        value: "road" as const,
+        value: "road",
         id: uuidv4(),
-        href: `/products/bikes/road`,
+        href: `/bikes/road`,
         items: [
           {
             brand: "Pinarello",
@@ -22,6 +22,7 @@ export const DATA = [
                 name: "DOGMA X",
                 id: uuidv4(),
                 price: "8 099",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/cff22838c3f40059bf83fc0d70bf22e9.png",
                   "https://pinarello.com/storage/ProductGallery/ed2fbe4ff7aa55ee50d4869ff83e446f.png",
@@ -32,6 +33,7 @@ export const DATA = [
                 name: "X9",
                 id: uuidv4(),
                 price: "7 599",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/bee41c10b944a0109ad629cd3762d5a2.png",
                   "https://pinarello.com/storage/ProductGallery/382bd213e23b2ddb2e9221c22790bb33.png",
@@ -42,6 +44,7 @@ export const DATA = [
                 name: "X7",
                 id: uuidv4(),
                 price: "6 599",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/fbbd392f5cb45ad84635c67af77917bf.png",
                   "https://pinarello.com/storage/ProductGallery/8f1ff404ad6cabeb5e4f7d5ddc8b394e.png",
@@ -52,6 +55,7 @@ export const DATA = [
                 name: "DOGMA F",
                 id: uuidv4(),
                 price: "12 199",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/7ea0be621fc5db07d97172c40dafb7fd.png",
                   "https://pinarello.com/storage/ProductGallery/ab59fa5ad591f2bf3f6df55da27b4aa2.png",
@@ -62,6 +66,7 @@ export const DATA = [
                 name: "BOLIDE TR",
                 id: uuidv4(),
                 price: "16 599",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/a32e9751bcd0c8183e8ef2f579721b6b.png",
                   "https://pinarello.com/storage/ProductGallery/da64885107379bc7eee9ac5065f704e3.png",
@@ -79,6 +84,7 @@ export const DATA = [
                 name: "Aeroad CFR",
                 id: uuidv4(),
                 price: "8 939",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwd97a2502/images/full/full_2024_/2023/full_2024_3691_aeroad-cfr-etap_P10_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwcd337338/images/detail/detail_202/2023/detail_2024_3691_aeroad-cfr-etap_P10_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -89,6 +95,7 @@ export const DATA = [
                 name: "Ultimate CFR",
                 id: uuidv4(),
                 price: "9 129 ",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw53cff317/images/full/full_2023_/2023/full_2023_3563_ultimate-cfr-etap_P03_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwa449bcd3/images/detail/detail_202/2023/detail_2023_3563_ultimate-cfr-etap_P03_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -99,6 +106,7 @@ export const DATA = [
                 name: "Inflite CFR Di2",
                 id: uuidv4(),
                 price: "6 629",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwad2be17c/images/full/full_2024_/2023/full_2024_Inflite_3553_inflite-cfr-di2-team_P31_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw26758545/images/detail/detail_202/2023/detail_2024_Inflite_3553_inflite-cfr-di2-team_P31_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -108,7 +116,8 @@ export const DATA = [
               {
                 name: "Ultimate CF SLX 8",
                 id: uuidv4(),
-                price: "6 599 ",
+                price: "6 599",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwf356411c/images/full/full_2023_/2023/full_2023_3559_ultimate-cf-slx-8-di2_P03_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw863dd38f/images/detail/detail_202/2023/detail_2023_3559_ultimate-cf-slx-8-di2_P03_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -126,6 +135,7 @@ export const DATA = [
                 name: "Allez",
                 id: uuidv4(),
                 price: "1 400",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/90022-70_ALLEZ-E5-DISC-SMK-WHT-SILDST_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/90022-70_ALLEZ-E5-DISC-SMK-WHT-SILDST_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -136,6 +146,7 @@ export const DATA = [
                 name: "Roubaix SL8",
                 id: uuidv4(),
                 price: "5 450",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/94423-51_ROUBAIX-COMP-REDGSTPRL-DUNEWHT-METOBSD_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/94423-51_ROUBAIX-COMP-REDGSTPRL-DUNEWHT-METOBSD_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -146,6 +157,7 @@ export const DATA = [
                 name: "Tarmac SL8 Pro",
                 id: uuidv4(),
                 price: "10 999",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/94924-12_TARMAC-SL8-PRO-UDI2-METPNGRN-WHT_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/94924-12_TARMAC-SL8-PRO-UDI2-METPNGRN-WHT_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -163,6 +175,7 @@ export const DATA = [
                 name: "Xelius SL 7.0",
                 id: uuidv4(),
                 price: "4 999",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/61/3e/36/1701956409/Xelius%20SL%207.0%20C1%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/62/29/b3/1701956408/Xelius%20SL%207.0%20C1%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -173,6 +186,7 @@ export const DATA = [
                 name: "Xelius SL 8.0",
                 id: uuidv4(),
                 price: "5 999",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/89/59/bd/1701956587/Xelius%20SL%208.0%20C1%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/14/9e/8a/1701956587/Xelius%20SL%208.0%20C1%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -183,6 +197,7 @@ export const DATA = [
                 name: "Xelius SL 9.0",
                 id: uuidv4(),
                 price: "8 599",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/76/2c/24/1704809648/Xelius%20SL%209.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/e4/98/fc/1704809651/Xelius%20SL%209.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -193,6 +208,7 @@ export const DATA = [
                 name: "Aircode DRS 5.0",
                 id: uuidv4(),
                 price: "3 799",
+                trending: true,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/c3/3c/19/1701944435/Aircode%20DRS%205.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/bf/46/d9/1701944435/Aircode%20DRS%205.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -210,6 +226,7 @@ export const DATA = [
                 name: "Madone SLR 9",
                 id: uuidv4(),
                 price: "14 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/MadoneSLR9_23_37419_B_Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/MadoneSLR9_23_37419_B_Alt1",
@@ -220,6 +237,7 @@ export const DATA = [
                 name: "Madone SLR 6",
                 id: uuidv4(),
                 price: "8 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/MadoneSLR6_23_37416_A_Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/MadoneSLR6_23_37416_A_Alt1",
@@ -237,6 +255,7 @@ export const DATA = [
                 name: "C68",
                 id: uuidv4(),
                 price: "7 999",
+                trending: true,
                 images: [
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/Colnago-C68-Road-HRBK.jpg",
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/COLNAGO-C68-FONDO-NERO-8-Grande-1024x683.jpg",
@@ -244,9 +263,10 @@ export const DATA = [
                 ],
               },
               {
-                name: "V4Rs ",
+                name: "V4Rs",
                 id: uuidv4(),
                 price: "9 999",
+                trending: false,
                 images: [
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/Colnago-V4Rs-SDM3.jpg",
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/V4Rs-particolari-team-19-min-1.jpg",
@@ -257,6 +277,7 @@ export const DATA = [
                 name: "TT1",
                 id: uuidv4(),
                 price: "18 959",
+                trending: false,
                 images: [
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/Colnago-TT1-SDM1.jpg",
                   "https://colnagopolska.pl/wp-content/uploads/2024/02/Colnago-TT1-Fondo-nero-8-min-1.jpg",
@@ -274,6 +295,7 @@ export const DATA = [
                 name: "SCULTURA ENDURANCE",
                 id: uuidv4(),
                 price: "2 999",
+                trending: false,
                 images: [
                   "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img//master/bikes/2024/SCULTURA_ENDURANCE_6000_redblk_MY24.tif?p3",
                 ],
@@ -282,6 +304,7 @@ export const DATA = [
                 name: "SCULTURA 8000",
                 id: uuidv4(),
                 price: "12 999",
+                trending: false,
                 images: [
                   "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img//master/bikes/2024/SCULTURA_8000_redblk_MY24.tif?p3",
                 ],
@@ -292,9 +315,9 @@ export const DATA = [
       },
       {
         type: "Gravel",
-        value: "gravel" as const,
+        value: "gravel",
         id: uuidv4(),
-        href: `/products/bikes/gravel`,
+        href: `/bikes/gravel`,
         items: [
           {
             brand: "Trek",
@@ -305,6 +328,7 @@ export const DATA = [
                 name: "Checkpoint SL 5",
                 id: uuidv4(),
                 price: "7 599",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSL5_22_35169_A_Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSL5_22_35169_A_Alt1",
@@ -315,6 +339,7 @@ export const DATA = [
                 name: "Checkpoint SLR 7",
                 id: uuidv4(),
                 price: "10 899",
+                trending: true,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSLR7AXS-24-41349-C-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSLR7AXS-24-41349-C-Alt1",
@@ -332,6 +357,7 @@ export const DATA = [
                 name: "Grail CF SLX 8",
                 id: uuidv4(),
                 price: "4 890",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw5b417d9d/images/full/full_2023_/2023/full_2023_grail_3579_grail-cf-slx-8-di2_P01_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw05b0c93c/images/detail/detail_202/2023/detail_2023_grail_3579_grail-cf-slx-8-di2_P01_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -342,6 +368,7 @@ export const DATA = [
                 name: "Grizl CF SL 8",
                 id: uuidv4(),
                 price: "3 999",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw35a67160/images/full/full_2023_/2023/full_2023_3785_grizl-cf-sl-8-1by_P07_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw18670b2c/images/detail/detail_202/2023/detail_2023_3785_grizl-cf-sl-8-1by_P07_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -352,6 +379,7 @@ export const DATA = [
                 name: "Grizl CF SLX 8 EKAR",
                 id: uuidv4(),
                 price: "4 000",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw95271735/images/full/full_2024_/2023/full_2024_3703_grizl-cf-slx-9-1by-eps_P07_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw8e2f37c0/images/detail/detail_202/2023/detail_2024_3703_grizl-cf-slx-9-1by-eps_P07_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -369,6 +397,7 @@ export const DATA = [
                 name: "Crosshill 6.0",
                 id: uuidv4(),
                 price: "2 599",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/85/a7/44/1702048491/Crosshill%206.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/4d/d9/28/1702048491/Crosshill%206.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -379,6 +408,7 @@ export const DATA = [
                 name: "Crosshill 5.0 ",
                 id: uuidv4(),
                 price: "2 199",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/64/91/4e/1702047311/Crosshill%205.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/da/81/f9/1702047311/Crosshill%205.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -389,6 +419,7 @@ export const DATA = [
                 name: "Crosshill 3.0",
                 id: uuidv4(),
                 price: "1 699",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/22/7c/6f/1702042896/Crosshill%203.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/48/0e/c4/1702042895/Crosshill%203.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -399,6 +430,7 @@ export const DATA = [
                 name: "Crosshill 2.0",
                 id: uuidv4(),
                 price: "1 299",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/60/e2/26/1702026734/Crosshill%202.0%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/a8/54/27/1702026734/Crosshill%202.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -416,6 +448,7 @@ export const DATA = [
                 name: "Diverge E5",
                 id: uuidv4(),
                 price: "1 900",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/95423-70_DIVERGE-E5-BRCH-WHTMTN_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/95423-70_DIVERGE-E5-BRCH-WHTMTN_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -426,6 +459,7 @@ export const DATA = [
                 name: "Crux Com",
                 id: uuidv4(),
                 price: "4 922",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/91424-50_CRUX-COMP-VIVPNK-EGRN_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/91424-50_CRUX-COMP-VIVPNK-EGRN_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -443,6 +477,7 @@ export const DATA = [
                 name: "GREVIL F9",
                 id: uuidv4(),
                 price: "12 999",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/cfd7942117c4576da94c78ebb20d48a1.png",
                   "https://pinarello.com/storage/ProductGallery/89d794cc716a06310a8d625d9b74fd6d.png",
@@ -453,6 +488,7 @@ export const DATA = [
                 name: "GREVIL F7",
                 id: uuidv4(),
                 price: "10 000",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/cce2bbf1e4611c10970b15588f5a7d64.png",
                   "https://pinarello.com/storage/ProductGallery/8f24b7394556d65eb3291154cba933d5.png",
@@ -463,6 +499,7 @@ export const DATA = [
                 name: "GRANGER X5 ",
                 id: uuidv4(),
                 price: "2 999",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/12a67795e58ed5c19e2b3ddc2ba9c2d2.png",
                 ],
@@ -471,6 +508,7 @@ export const DATA = [
                 name: "NYTRO E5",
                 id: uuidv4(),
                 price: "4 989",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/b6db46317fa30a29d7148adf3df8e903.png",
                   "https://pinarello.com/storage/ProductGallery/a2cd4e43371fc7a85ff9f184bc575c5c.png",
@@ -483,9 +521,9 @@ export const DATA = [
       },
       {
         type: "Mtb",
-        value: "mtb" as const,
+        value: "mtb",
         id: uuidv4(),
-        href: `/products/bikes/mtb`,
+        href: `/bikes/mtb`,
         items: [
           {
             brand: "Canyon",
@@ -496,6 +534,7 @@ export const DATA = [
                 name: "Neuron CF 8",
                 id: uuidv4(),
                 price: "3 100",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwe7398372/images/full/full_2023_/2023/full_2023_3170_neuron-cf-8_sr-bk_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw71cbe0b2/images/detail/detail_202/2023/detail_2023_3170_neuron-cf-8_sr-bk_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -506,6 +545,7 @@ export const DATA = [
                 name: "Lux World Cup CF 7",
                 id: uuidv4(),
                 price: "4 299",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwb7f49281/images/full/full_2022_/2022/full_2022_lux-world-cup-7_3138_P01_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw12611d26/images/detail/detail_202/2022/detail_2022_lux-world-cup-7_3138_P01_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -516,6 +556,7 @@ export const DATA = [
                 name: "Spectral:ON CF 8",
                 id: uuidv4(),
                 price: "5 999",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw267e85f4/images/full/full_2023_/2023/full_2023_3390_spectral-on-cf-8_P06_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwacd63b07/images/detail/detail_202/2023/detail_2023_3390_spectral-on-cf-8_P06_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -526,6 +567,7 @@ export const DATA = [
                 name: "Exceed CF SLX",
                 id: uuidv4(),
                 price: "4 819",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw01bb7933/images/full/full_2023_/2023/full_2023_3525_exceed-cf-slx-mvdp_P12_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw4c1c5356/images/detail/detail_202/2023/detail_2023_3525_exceed-cf-slx-mvdp_P12_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -536,6 +578,7 @@ export const DATA = [
                 name: "Neuron CF 9",
                 id: uuidv4(),
                 price: "5 780",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw2d5ac901/images/full/full_2023_/2023/full_2023_3172_neuron-cf-9_sr-bk_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw0a93a135/images/detail/detail_202/2023/detail_2023_3172_neuron-cf-9_sr-bk_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -553,6 +596,7 @@ export const DATA = [
                 name: "Overvolt AM 8.7",
                 id: uuidv4(),
                 price: "6 799",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/5f/de/78/1703082708/Overvolt%20AM%208.7%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/93/23/e7/1703082711/Overvolt%20AM%208.7%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -563,6 +607,7 @@ export const DATA = [
                 name: "Overvolt AM 7.7",
                 id: uuidv4(),
                 price: "6 199",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/81/d0/49/1707230666/Overvolt%20AM%207.7%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/da/2f/66/1707230666/Overvolt%20AM%207.7%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -573,6 +618,7 @@ export const DATA = [
                 name: "Overvolt AM 9.7",
                 id: uuidv4(),
                 price: "7 999",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/b5/1d/95/1691069341/LAPIERRE_MY23_OVERVOLT_AM_9.7.png?force_format=webp",
                 ],
@@ -588,6 +634,7 @@ export const DATA = [
                 name: "Supercaliber SLR 9.9",
                 id: uuidv4(),
                 price: "13 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR99XXAXS-24-41725-C-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR99XXAXS-24-41725-C-Alt1",
@@ -598,6 +645,7 @@ export const DATA = [
                 name: "Supercaliber SLR 9.8",
                 id: uuidv4(),
                 price: "8 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR98XT-24-41721-C-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR98XT-24-41721-C-Alt1",
@@ -608,6 +656,7 @@ export const DATA = [
                 name: "Top Fuel 9.9",
                 id: uuidv4(),
                 price: "10 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/TopFuel99XXAXS-24-41651-B-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/TopFuel99XXAXS-24-41651-B-Alt1",
@@ -618,6 +667,7 @@ export const DATA = [
                 name: "Top Fuel 9.8 GX",
                 id: uuidv4(),
                 price: "5 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/TopFuel98GXAXS-24-41646-B-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/TopFuel98GXAXS-24-41646-B-Alt1",
@@ -635,6 +685,7 @@ export const DATA = [
                 name: "S-Works Turbo Kenevo",
                 id: uuidv4(),
                 price: "16 999",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/98023-00_KENEVO-SL-SW-CARBON-29-BLKLQDMET-BRSH-LQDMET_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/98023-00_KENEVO-SL-SW-CARBON-29-BLKLQDMET-BRSH-LQDMET_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -645,6 +696,7 @@ export const DATA = [
                 name: "S-Works Epic World Cup",
                 id: uuidv4(),
                 price: "12 890",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/93123-00_EPIC-WC-SW-REDTNT-FLKSIL-GRNT_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/93123-00_EPIC-WC-SW-REDTNT-FLKSIL-GRNT_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -655,6 +707,7 @@ export const DATA = [
                 name: "Epic 8 Pro",
                 id: uuidv4(),
                 price: "9 999",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/90324-10_EPIC-PRO-CARB-METSPHR-METWHTSIL_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/90324-10_EPIC-PRO-CARB-METSPHR-METWHTSIL_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -665,6 +718,7 @@ export const DATA = [
                 name: "Turbo Kenevo SL 2",
                 id: uuidv4(),
                 price: "7 990",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/98024-30_KENEVO-SL-EXPERT-CARBON-29-METSPR-SPR_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/98024-30_KENEVO-SL-EXPERT-CARBON-29-METSPR-SPR_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -675,6 +729,7 @@ export const DATA = [
                 name: "Demo Race",
                 id: uuidv4(),
                 price: "11 100",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/94524-70_DEMO-RACE-TLTNT-WHT_HERO?$scom-pdp-product-image$&fmt=auto",
                   "https://assets.specialized.com/i/specialized/94524-70_DEMO-RACE-TLTNT-WHT_FDSQ?$scom-pdp-product-image$&fmt=auto",
@@ -692,6 +747,7 @@ export const DATA = [
                 name: "ONE-SIXTY 10K",
                 id: uuidv4(),
                 price: "9 999",
+                trending: false,
                 images: [
                   "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img//master/bikes/2024/ONE-SIXTY_10K_grnblk_MY24.tif?p3",
                 ],
@@ -700,6 +756,7 @@ export const DATA = [
                 name: "ONE-SIXTY 8000",
                 id: uuidv4(),
                 price: "7 000",
+                trending: false,
                 images: [
                   "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img//master/bikes/2024/ONE-SIXTY_8000_blublk_MY24.tif?p3",
                 ],
@@ -708,6 +765,7 @@ export const DATA = [
                 name: "ONE-FORTY 6000",
                 id: uuidv4(),
                 price: "11 000",
+                trending: false,
                 images: [
                   "https://d2lljesbicak00.cloudfront.net/merida-v2/crud-zoom-img//master/bikes/2024/ONE-FORTY_6000_blured_MY24.tif?p3",
                 ],
@@ -718,9 +776,9 @@ export const DATA = [
       },
       {
         type: "e-Bike",
-        value: "e-bike" as const,
+        value: "e-bike",
         id: uuidv4(),
-        href: `/products/bikes/e-bike`,
+        href: `/bikes/e-bike`,
         items: [
           {
             brand: "Canyon",
@@ -731,6 +789,7 @@ export const DATA = [
                 name: "Neuron:ON CF 7",
                 id: uuidv4(),
                 price: "4 999",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw4d0c89db/images/full/full_2023_/2023/full_2023_3961_neuron-on-cf-7_P02_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwe7e06c99/images/detail/detail_202/2023/detail_2023_3961_neuron-on-cf-7_P02_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -741,6 +800,7 @@ export const DATA = [
                 name: "Pathlite:ON 6 SUV ",
                 id: uuidv4(),
                 price: "3 999",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwa9c4163d/images/full/full_2024_/2023/full_2024_3596_pathlite-on-6-suv-st_gy_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwcf4e93b7/images/detail/detail_202/2023/detail_2024_3596_pathlite-on-6-suv-st_gy_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -751,6 +811,7 @@ export const DATA = [
                 name: "Pathlite:ON 5 SUV",
                 id: uuidv4(),
                 price: "4 299",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dwcf928cd6/images/full/full_2024_/2023/full_2024_3595_pathlite-on-5-suv-st_og_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw3503a005/images/detail/detail_202/2023/detail_2024_3595_pathlite-on-5-suv-st_og_P5.jpg?sw=1300&sh=1300&sm=cut&sfrm=png&q=90&bgcolor=F2F2F2",
@@ -768,6 +829,7 @@ export const DATA = [
                 name: "NYTRO E9 Gravel",
                 id: uuidv4(),
                 price: "14 890",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/42d500ed92a21e20a15d054a578b939e.png",
                   "https://pinarello.com/storage/ProductGallery/ea38cfd874118bf8ca81b0af67ab583c.png",
@@ -778,6 +840,7 @@ export const DATA = [
                 name: "NYTRO E5 ",
                 id: uuidv4(),
                 price: "9 999",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/8fb8925b12bb9789ebfba548107657bd.png",
                 ],
@@ -786,6 +849,7 @@ export const DATA = [
                 name: "NYTRO E7 Road",
                 id: uuidv4(),
                 price: "11 000",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/4c3e3710f9f6010c1af380e7c18f13f1.png",
                   "https://pinarello.com/storage/ProductGallery/18bfc46c3f842780002fcd654a27117b.png",
@@ -796,6 +860,7 @@ export const DATA = [
                 name: "NYTRO E9 Road",
                 id: uuidv4(),
                 price: "12 999",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/9acdb97942bf4770cb3b2fb33509af35.png",
                   "https://pinarello.com/storage/ProductGallery/2550806515ddb0aa931a93e60103af0f.png",
@@ -806,6 +871,7 @@ export const DATA = [
                 name: "NYTRO E7 GRAVEL",
                 id: uuidv4(),
                 price: "17 010",
+                trending: false,
                 images: [
                   "https://pinarello.com/storage/Variant/a5ffb7693f47217436b13137c89b5038.png",
                   "https://pinarello.com/storage/ProductGallery/02dbe859a5bb4135b6a3908570d4a5cd.png",
@@ -823,6 +889,7 @@ export const DATA = [
                 name: "Verve+ 5",
                 id: uuidv4(),
                 price: "5 200",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/VervePlus5Men-24-41026-A-Primary",
                 ],
@@ -831,6 +898,7 @@ export const DATA = [
                 name: "District+ 1 Lowstep",
                 id: uuidv4(),
                 price: "4 999",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/DistrictPlus1Low-24-41606-B-Primary",
                 ],
@@ -839,6 +907,7 @@ export const DATA = [
                 name: "District+ 5",
                 id: uuidv4(),
                 price: "7 019",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/DistrictPlus5Low-24-41755-B-Primary",
                 ],
@@ -854,6 +923,7 @@ export const DATA = [
                 name: "Overvolt AM 7.7",
                 id: uuidv4(),
                 price: "6 199",
+                trending: true,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/81/d0/49/1707230666/Overvolt%20AM%207.7%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/da/2f/66/1707230666/Overvolt%20AM%207.7%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -864,6 +934,7 @@ export const DATA = [
                 name: "Overvolt AM 8.7",
                 id: uuidv4(),
                 price: "6 799",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/5f/de/78/1703082708/Overvolt%20AM%208.7%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/93/23/e7/1703082711/Overvolt%20AM%208.7%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -874,6 +945,7 @@ export const DATA = [
                 name: "e-Urban 3.5",
                 id: uuidv4(),
                 price: "2 299",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/81/fd/61/1707230822/E-Urban%203.5%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/0e/bb/df/1707230822/E-Urban%203.5%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -884,6 +956,7 @@ export const DATA = [
                 name: "e-Explorer 4.5 High",
                 id: uuidv4(),
                 price: "2 799",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/56/ba/1f/1707231079/E-Explorer%204.5%20High%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/0a/e7/42/1707231079/E-Explorer%204.5%20High%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -893,6 +966,7 @@ export const DATA = [
                 name: "e-Urban 4.5",
                 id: uuidv4(),
                 price: "2 699",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/69/ca/07/1703154042/E-Urban%204.5%20-%20Lapierre%20MY24%20-%20View%20(1).jpeg?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/d3/e4/a4/1703154041/E-Urban%204.5%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -907,15 +981,15 @@ export const DATA = [
   },
   {
     category: "Framesets",
-    value: "framesets" as const,
+    value: "framesets",
     id: uuidv4(),
     isNested: true,
     featured: [
       {
         type: "Road",
-        value: "road-frame" as const,
+        value: "road-frame",
         id: uuidv4(),
-        href: `/products/framesets/road`,
+        href: `/framesets/road`,
         items: [
           {
             brand: "Canyon",
@@ -926,6 +1000,7 @@ export const DATA = [
                 name: "Aeroad CFR",
                 id: uuidv4(),
                 price: "7 199",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw3685a031/images/full/full_2023_/2023/full_2023_3943_aeroad-cfr-disc-frs-brake-kit_P10_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                 ],
@@ -934,6 +1009,7 @@ export const DATA = [
                 name: "Ultimate CFR Disc",
                 id: uuidv4(),
                 price: "4 099",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw2bed72a4/images/full/full_2023_/2023/full_2023_ultimate-cfr-frs_3326_P02_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                 ],
@@ -942,6 +1018,7 @@ export const DATA = [
                 name: "Ultimate CFR Alpecin",
                 id: uuidv4(),
                 price: "6 799",
+                trending: false,
                 images: [
                   "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw05a76ce8/images/full/full_2023_/2023/full_2023_3565_ultimate-cfr-disc-frs_P04_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2",
                 ],
@@ -957,6 +1034,7 @@ export const DATA = [
                 name: "S-Works Diverge STR",
                 id: uuidv4(),
                 price: "4 999",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/76224-00_DIVERGE-STR-SW-FRMSET-DUNEWHT-BRCH-PRL_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
@@ -965,6 +1043,7 @@ export const DATA = [
                 name: "Allez Sprint",
                 id: uuidv4(),
                 price: "2 999",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/70024-70_ALLEZ-SPRINT-FRMSET-REDSKY-WHT_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
@@ -973,6 +1052,7 @@ export const DATA = [
                 name: "S-Works Tarmac SL8",
                 id: uuidv4(),
                 price: "7 299",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/74924-08_TARMAC-SL8-SW-FRMSET-LTD-BORA_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
@@ -981,6 +1061,7 @@ export const DATA = [
                 name: "Epic 8 EVO Pro",
                 id: uuidv4(),
                 price: "3 299",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/70324-10_EPIC-PRO-130-FRM-WHT-FOGTNT-SMK_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
@@ -989,6 +1070,7 @@ export const DATA = [
                 name: "S-Works Stumpjumper",
                 id: uuidv4(),
                 price: "5 699",
+                trending: false,
                 images: [
                   "https://assets.specialized.com/i/specialized/76324-00_SJ-EVO-SW-FRM-SLPHR-BRSYYEL-OLVGRN_HERO?$scom-pdp-product-image$&fmt=auto",
                 ],
@@ -1004,6 +1086,7 @@ export const DATA = [
                 name: "795 Blade",
                 id: uuidv4(),
                 price: "4 299",
+                trending: false,
                 images: [
                   "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/795-Blade/Pro-Team/795-Blade-Rs-Pro-Team-Black-Frameset.jpg",
                 ],
@@ -1012,6 +1095,7 @@ export const DATA = [
                 name: "795 Blade Iconic Edition",
                 id: uuidv4(),
                 price: "5 299",
+                trending: false,
                 images: [
                   "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/795-Blade/Iconic/795-Blade-Rs-Iconic-Frameset.jpg",
                 ],
@@ -1027,6 +1111,7 @@ export const DATA = [
                 name: "Xelius SL",
                 id: uuidv4(),
                 price: "3 899",
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/62/b9/39/1687873040/Xelius%20SL%2010.0%20KC%20-%20Lapierre%20x%20Obvious%20MY24%20-%20View%20(3).jpg",
                 ],
@@ -1037,9 +1122,9 @@ export const DATA = [
       },
       {
         type: "Aero",
-        value: "aerodynamic" as const,
+        value: "aerodynamic",
         id: uuidv4(),
-        href: `/products/framesets/aerodynamic`,
+        href: `/framesets/aerodynamic`,
         items: [
           {
             brand: "Trek",
@@ -1050,6 +1135,7 @@ export const DATA = [
                 name: "Speed Concept SLR",
                 id: uuidv4(),
                 price: "4 599",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SpeedConceptSLRFrameset_22_35671_A_Primary",
                 ],
@@ -1058,6 +1144,7 @@ export const DATA = [
                 name: "Speed Concept TT",
                 id: uuidv4(),
                 price: "5 199",
+                trending: false,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SpeedConceptTTFrameset_22_35746_A_Primary",
                 ],
@@ -1073,6 +1160,7 @@ export const DATA = [
                 name: "Slick triathlon v2",
                 id: uuidv4(),
                 price: "6 599",
+                trending: false,
                 images: [
                   "https://www.trifanatics.es/productosdata/Israel_Start_Up_Nation_Slick_Disc_Frame_set_180.jpg",
                 ],
@@ -1088,6 +1176,7 @@ export const DATA = [
                 name: "P24",
                 id: uuidv4(),
                 price: "11 999",
+                trending: false,
                 images: [
                   "https://www.lookcycle.com/media/cache/product_large_thumbnail/products-bikes-2024/look-p24/P24.jpg",
                 ],
@@ -1100,87 +1189,89 @@ export const DATA = [
   },
   {
     category: "Wheels",
-    value: "wheels" as const,
+    value: "wheels",
     id: uuidv4(),
     isNested: false,
     featured: [
       {
-        type: "Flat Routes",
-        value: "flat-routes" as const,
+        type: "Aero",
+        value: "aero",
         id: uuidv4(),
-        href: `/products/wheels/flat-routes`,
+        href: `/wheels/aero`,
         items: [
           {
-            kind: "Flat Routes",
+            brand: "",
+            kind: "Aero",
             id: uuidv4(),
             models: [
               {
-                kind: "Flat Routes",
+                brand: "Enve",
+                name: "SES 4.5",
                 id: uuidv4(),
-                models: [
-                  {
-                    brand: "Enve",
-                    name: "SES 4.5",
-                    id: uuidv4(),
-                    price: "1 280",
-                    images: [
-                      "https://enve.com/cdn/shop/files/SES_4.5_front_angle.jpg?v=1704989386&width=1800",
-                    ],
-                  },
-                  {
-                    brand: "Enve",
-                    name: "65",
-                    id: uuidv4(),
-                    price: "1 400",
-                    images: [
-                      "https://enve.com/cdn/shop/products/Foundation65_Hero.png?v=1683741465&width=1800",
-                    ],
-                  },
-                  {
-                    brand: "Enve",
-                    name: "SES DISC REAR",
-                    id: uuidv4(),
-                    price: "2 900",
-                    images: [
-                      "https://enve.com/cdn/shop/files/SESDisc_Hero.png?v=1709231344&width=1800",
-                    ],
-                  },
-                  {
-                    brand: "DT Swiss",
-                    name: "ARC 1100",
-                    id: uuidv4(),
-                    price: "2 499",
-                    images: [
-                      "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/48/1/PHO_AAOTIX0000A_ARC1100_rimbrake_WEB_SHO_001.jpg",
-                    ],
-                  },
-                  {
-                    brand: "DT Swiss",
-                    name: "ARC 1100 Disc",
-                    id: uuidv4(),
-                    price: "2 399",
-                    images: [
-                      "https://www.dtswiss.com/itc/00/00/00/00/00/00/00/00/70/00/11/21/0/PHO_WARC110NIDJC010998_WEB_SHO_001.jpg",
-                    ],
-                  },
-                  {
-                    brand: "Zipp",
-                    name: "858 NSW",
-                    id: uuidv4(),
-                    price: "2 999",
-                    images: [
-                      "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-858-nsw-tl-disc-brake-c1/productassets_wh-858-ntld-c1_fg/wh-858-nsw-tl-dbcl-700f-12x100-std-c1-c-front-s.png?w=800&quality=80&format=webp",
-                    ],
-                  },
-                  {
-                    brand: "Zipp",
-                    name: "Super-9 Clincher",
-                    id: uuidv4(),
-                    price: "3 200",
-                    images: [
-                      "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-sp9-tl-track-b1/productassets_wh-sp9-tltk-b1_fg/wh-sp9-tl-tk-700r-std-a1-f-front-s.png?w=800&quality=80&format=webp",
-                    ],
-                  },
+                price: "1 280",
+                trending: false,
+                images: [
+                  "https://enve.com/cdn/shop/files/SES_4.5_front_angle.jpg?v=1704989386&width=1800",
+                ],
+              },
+              {
+                brand: "Enve",
+                name: "65",
+                id: uuidv4(),
+                price: "1 400",
+                trending: false,
+                images: [
+                  "https://enve.com/cdn/shop/products/Foundation65_Hero.png?v=1683741465&width=1800",
+                ],
+              },
+              {
+                brand: "Enve",
+                name: "SES DISC REAR",
+                id: uuidv4(),
+                price: "2 900",
+                trending: false,
+                images: [
+                  "https://enve.com/cdn/shop/files/SESDisc_Hero.png?v=1709231344&width=1800",
+                ],
+              },
+              {
+                brand: "DT Swiss",
+                name: "ARC 1100",
+                id: uuidv4(),
+                price: "2 499",
+                trending: false,
+                images: [
+                  "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/48/1/PHO_AAOTIX0000A_ARC1100_rimbrake_WEB_SHO_001.jpg",
+                ],
+              },
+              {
+                brand: "DT Swiss",
+                name: "ARC 1100 Disc",
+                id: uuidv4(),
+                price: "2 399",
+                trending: false,
+                images: [
+                  "https://www.dtswiss.com/itc/00/00/00/00/00/00/00/00/70/00/11/21/0/PHO_WARC110NIDJC010998_WEB_SHO_001.jpg",
+                ],
+              },
+              {
+                brand: "Zipp",
+                name: "858 NSW",
+                id: uuidv4(),
+                price: "2 999",
+                trending: false,
+                images: [
+                  "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-858-nsw-tl-disc-brake-c1/productassets_wh-858-ntld-c1_fg/wh-858-nsw-tl-dbcl-700f-12x100-std-c1-c-front-s.png?w=800&quality=80&format=webp",
+                ],
+              },
+              {
+                brand: "Zipp",
+                name: "Super-9 Clincher",
+                id: uuidv4(),
+                price: "3 200",
+                trending: false,
+                images: [
+                  "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-sp9-tl-track-b1/productassets_wh-sp9-tltk-b1_fg/wh-sp9-tl-tk-700r-std-a1-f-front-s.png?w=800&quality=80&format=webp",
                 ],
               },
             ],
@@ -1188,13 +1279,14 @@ export const DATA = [
         ],
       },
       {
-        type: "Mountain Routes",
-        value: "mountain-routes" as const,
+        type: "Cross Road",
+        value: "cross-road",
         id: uuidv4(),
-        href: `/products/wheels/mountain-routes`,
+        href: `/wheels/cross-road`,
         items: [
           {
-            kind: "Mountain Routes",
+            brand: "",
+            kind: "Cross Road",
             id: uuidv4(),
             models: [
               {
@@ -1202,6 +1294,7 @@ export const DATA = [
                 name: "SES 2.3",
                 id: uuidv4(),
                 price: "1 200",
+                trending: false,
                 images: [
                   "https://enve.com/cdn/shop/files/SES_2.3_front_angle.jpg?v=1705021935&width=1800",
                 ],
@@ -1211,6 +1304,7 @@ export const DATA = [
                 name: "SES 3.4",
                 id: uuidv4(),
                 price: "1 300",
+                trending: false,
                 images: [
                   "https://enve.com/cdn/shop/files/SES_3.4_front_angle.jpg?v=1704989297&width=1800",
                 ],
@@ -1220,6 +1314,7 @@ export const DATA = [
                 name: "M640",
                 id: uuidv4(),
                 price: "2 500",
+                trending: false,
                 images: [
                   "https://enve.com/cdn/shop/files/M630_Side-1024x683_3375a4b8-6260-4361-ade7-aa336c887802.jpg?v=1690914374&width=1800",
                 ],
@@ -1229,6 +1324,7 @@ export const DATA = [
                 name: "M735",
                 id: uuidv4(),
                 price: "2 550",
+                trending: false,
                 images: [
                   "https://enve.com/cdn/shop/files/M735_Side-1024x683_2f280ec1-359c-45d4-9af8-94e3dcc3930c.jpg?v=1690914420&width=1800",
                 ],
@@ -1238,6 +1334,7 @@ export const DATA = [
                 name: "XRC 1200",
                 id: uuidv4(),
                 price: "2 999",
+                trending: false,
                 images: [
                   "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/47/9/PHO_AAAAKX_XRC1200_WEB_SHO_001.jpg",
                 ],
@@ -1247,6 +1344,7 @@ export const DATA = [
                 name: "XRC 1501",
                 id: uuidv4(),
                 price: "2 200",
+                trending: false,
                 images: [
                   "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/67/2/PHO_AAAAQX_XRC1501_WEB_SHO_001.jpg",
                 ],
@@ -1256,6 +1354,7 @@ export const DATA = [
                 name: "353 NSW",
                 id: uuidv4(),
                 price: "1 299",
+                trending: false,
                 images: [
                   "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-353-nsw-tl-disc-brake-a1/productassets_wh-353-ntld-a1_fg/wh-353-nsw-tl-dbcl-700f-12x100-std-a1-c-side-s.png?w=800&quality=80&format=webp",
                 ],
@@ -1265,6 +1364,7 @@ export const DATA = [
                 name: "1ZERO HITOP SW",
                 id: uuidv4(),
                 price: "999",
+                trending: false,
                 images: [
                   "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-1zero-hitop-sw-a1/productassets_wh-1zro-htsw-a1_fg/wh-1zero-hitp-sw-29f-15x110-std-a1-c-side-s.png?w=800&quality=80&format=webp",
                 ],
@@ -1274,6 +1374,7 @@ export const DATA = [
                 name: "1ZERO HITOP S",
                 id: uuidv4(),
                 price: "1 399",
+                trending: false,
                 images: [
                   "https://www.sram.com/globalassets/image-hierarchy/sram-product-root-images/wheels/wheels/wh-1zero-hitop-s-a1/productassets_wh-1zro-hts-a1_fg/wh-1zero-hitp-s-29f-15x110-std-a1-c-side.png?w=800&quality=80&format=webp",
                 ],

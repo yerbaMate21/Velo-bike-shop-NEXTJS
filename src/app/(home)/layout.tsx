@@ -9,7 +9,7 @@ export default function HomeLayout({
   return (
     <div>
       <Navbar />
-      {children}
+      <div className="bg-muted">{children}</div>
       <Footer />
     </div>
   );

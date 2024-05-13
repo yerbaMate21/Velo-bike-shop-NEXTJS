@@ -52,12 +52,12 @@ let itemsImages: { category: string; src: string }[] = [
     src: "/images/aerodynamic.webp",
   },
   {
-    category: "flat-routes",
-    src: "/images/flat-routes.avif",
+    category: "aero",
+    src: "/images/aero-wheels.avif",
   },
   {
-    category: "mountain-routes",
-    src: "/images/mountain-routes.avif",
+    category: "cross-road",
+    src: "/images/cross-road-wheels.avif",
   },
 ];
 
@@ -88,31 +88,31 @@ const NavItems = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger
                 className="hover:bg-transparent data-[state=open]:bg-transparent 
-              data-[state=open]:text-rose-500"
+              data-[state=open]:text-custom"
                 onMouseEnter={() => handleCatImage(data.value)}
               >
-                <div className="mx-2 text-base font-medium">
+                <div className="mx-2 text-base font-medium uppercase">
                   {data.category}
                 </div>
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-primary-foreground">
+              <NavigationMenuContent className="bg-muted">
                 <div
                   className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] 
                 rounded-sm border-[1px] bg-white"
                 >
-                  <div className="rounded-bl-sm rounded-tl-sm bg-secondary">
+                  <div className="rounded-bl-sm rounded-tl-sm">
                     {data.featured.map((item) => (
                       <div key={item.id}>
                         <div className="mx-4">
-                          <Link href={`/products/${data.value}/${item.value}`}>
+                          <Link href={`/${data.value}/${item.value}`}>
                             <div
                               className={`${buttonVariants({
                                 variant: "link-secondary",
                                 size: "no-padding-x",
-                              })} my-2 w-full`}
+                              })} w-full py-3`}
                               onMouseEnter={() => handleTypeImage(item.value)}
                             >
-                              <div className="w-full text-lg font-normal">
+                              <div className="w-full text-lg uppercase">
                                 {item.type}
                               </div>
                             </div>
@@ -122,7 +122,7 @@ const NavItems = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="relative h-[340px] w-full">
+                  <div className="relative h-[340px] w-full border-l-[1px]">
                     <Image
                       src={catImage}
                       fill
@@ -133,7 +133,7 @@ const NavItems = () => {
                 </div>
 
                 <div className="text-center">
-                  <Link href={`/products/${data.value}`}>
+                  <Link href={`/${data.value}`}>
                     <div
                       className={`${buttonVariants({
                         variant: "link-secondary",
@@ -148,7 +148,7 @@ const NavItems = () => {
             </NavigationMenuItem>
           </div>
         ))}
-        <div className="px-2">
+        <div className="px-4">
           <Link
             href="/world-tour"
             className={buttonVariants({

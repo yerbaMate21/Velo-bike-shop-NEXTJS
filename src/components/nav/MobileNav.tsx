@@ -66,7 +66,7 @@ const MobileNav = () => {
                         </div>
                       </div>
                     ) : (
-                      <Link href={`/products/${data.value}`}>
+                      <Link href={`/${data.value}`}>
                         <div
                           className={`${buttonVariants({ variant: "link" })} 
                           my-2 w-full`}

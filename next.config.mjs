@@ -16,6 +16,7 @@ const nextConfig = {
       "enve.com",
       "www.sram.com",
       "images.unsplash.com",
+      "colnagopolska.pl",
     ],
   },
 };

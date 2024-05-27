@@ -5,7 +5,6 @@ export const DATA = [
     category: "Bikes",
     value: "bikes",
     id: uuidv4(),
-    isNested: true,
     featured: [
       {
         type: "Road",
@@ -19,7 +18,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "DOGMA X",
+                name: "DOGMA-X",
                 id: uuidv4(),
                 price: "8 099",
                 trending: false,
@@ -52,7 +51,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "DOGMA F",
+                name: "DOGMA-F",
                 id: uuidv4(),
                 price: "12 199",
                 trending: false,
@@ -63,7 +62,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "BOLIDE TR",
+                name: "BOLIDE-TR",
                 id: uuidv4(),
                 price: "16 599",
                 trending: false,
@@ -81,7 +80,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Aeroad CFR",
+                name: "Aeroad-CFR",
                 id: uuidv4(),
                 price: "8 939",
                 trending: false,
@@ -92,7 +91,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Ultimate CFR",
+                name: "Ultimate-CFR",
                 id: uuidv4(),
                 price: "9 129 ",
                 trending: false,
@@ -103,7 +102,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Inflite CFR Di2",
+                name: "Inflite-CFR-Di2",
                 id: uuidv4(),
                 price: "6 629",
                 trending: false,
@@ -114,7 +113,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Ultimate CF SLX 8",
+                name: "Ultimate-CF-SLX-8",
                 id: uuidv4(),
                 price: "6 599",
                 trending: false,
@@ -143,7 +142,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Roubaix SL8",
+                name: "Roubaix-SL8",
                 id: uuidv4(),
                 price: "5 450",
                 trending: false,
@@ -154,7 +153,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Tarmac SL8 Pro",
+                name: "Tarmac-SL8-Pro",
                 id: uuidv4(),
                 price: "10 999",
                 trending: false,
@@ -172,7 +171,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Xelius SL 7.0",
+                name: "Xelius-SL-7.0",
                 id: uuidv4(),
                 price: "4 999",
                 trending: false,
@@ -183,7 +182,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Xelius SL 8.0",
+                name: "Xelius-SL-8.0",
                 id: uuidv4(),
                 price: "5 999",
                 trending: false,
@@ -194,7 +193,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Xelius SL 9.0",
+                name: "Xelius-SL-9.0",
                 id: uuidv4(),
                 price: "8 599",
                 trending: false,
@@ -205,7 +204,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Aircode DRS 5.0",
+                name: "Aircode-DRS-5.0",
                 id: uuidv4(),
                 price: "3 799",
                 trending: true,
@@ -223,7 +222,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Madone SLR 9",
+                name: "Madone-SLR-9",
                 id: uuidv4(),
                 price: "14 999",
                 trending: false,
@@ -234,7 +233,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Madone SLR 6",
+                name: "Madone-SLR-6",
                 id: uuidv4(),
                 price: "8 999",
                 trending: false,
@@ -292,7 +291,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "SCULTURA ENDURANCE",
+                name: "SCULTURA-ENDURANCE",
                 id: uuidv4(),
                 price: "2 999",
                 trending: false,
@@ -301,7 +300,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "SCULTURA 8000",
+                name: "SCULTURA-8000",
                 id: uuidv4(),
                 price: "12 999",
                 trending: false,
@@ -325,7 +324,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Checkpoint SL 5",
+                name: "Checkpoint-SL-5",
                 id: uuidv4(),
                 price: "7 599",
                 trending: false,
@@ -336,7 +335,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Checkpoint SLR 7",
+                name: "Checkpoint-SLR-7",
                 id: uuidv4(),
                 price: "10 899",
                 trending: true,
@@ -354,7 +353,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Grail CF SLX 8",
+                name: "Grail-CF-SLX-8",
                 id: uuidv4(),
                 price: "4 890",
                 trending: false,
@@ -365,7 +364,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Grizl CF SL 8",
+                name: "Grizl-CF-SL-8",
                 id: uuidv4(),
                 price: "3 999",
                 trending: false,
@@ -376,7 +375,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Grizl CF SLX 8 EKAR",
+                name: "Grizl-CF-SLX-8-EKAR",
                 id: uuidv4(),
                 price: "4 000",
                 trending: false,
@@ -394,7 +393,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Crosshill 6.0",
+                name: "Crosshill-6.0",
                 id: uuidv4(),
                 price: "2 599",
                 trending: false,
@@ -405,7 +404,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Crosshill 5.0 ",
+                name: "Crosshill-5.0 ",
                 id: uuidv4(),
                 price: "2 199",
                 trending: false,
@@ -416,7 +415,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Crosshill 3.0",
+                name: "Crosshill-3.0",
                 id: uuidv4(),
                 price: "1 699",
                 trending: false,
@@ -427,7 +426,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Crosshill 2.0",
+                name: "Crosshill-2.0",
                 id: uuidv4(),
                 price: "1 299",
                 trending: false,
@@ -445,7 +444,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Diverge E5",
+                name: "Diverge-E5",
                 id: uuidv4(),
                 price: "1 900",
                 trending: false,
@@ -456,7 +455,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Crux Com",
+                name: "Crux-Com",
                 id: uuidv4(),
                 price: "4 922",
                 trending: false,
@@ -474,7 +473,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "GREVIL F9",
+                name: "GREVIL-F9",
                 id: uuidv4(),
                 price: "12 999",
                 trending: false,
@@ -485,7 +484,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "GREVIL F7",
+                name: "GREVIL-F7",
                 id: uuidv4(),
                 price: "10 000",
                 trending: false,
@@ -496,7 +495,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "GRANGER X5 ",
+                name: "GRANGER-X5 ",
                 id: uuidv4(),
                 price: "2 999",
                 trending: false,
@@ -505,7 +504,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "NYTRO E5",
+                name: "NYTRO-E5",
                 id: uuidv4(),
                 price: "4 989",
                 trending: false,
@@ -531,7 +530,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Neuron CF 8",
+                name: "Neuron-CF-8",
                 id: uuidv4(),
                 price: "3 100",
                 trending: false,
@@ -542,7 +541,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Lux World Cup CF 7",
+                name: "Lux-World-Cup-CF-7",
                 id: uuidv4(),
                 price: "4 299",
                 trending: false,
@@ -553,7 +552,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Spectral:ON CF 8",
+                name: "Spectral:ON-CF-8",
                 id: uuidv4(),
                 price: "5 999",
                 trending: false,
@@ -564,7 +563,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Exceed CF SLX",
+                name: "Exceed-CF-SLX",
                 id: uuidv4(),
                 price: "4 819",
                 trending: false,
@@ -575,7 +574,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Neuron CF 9",
+                name: "Neuron-CF-9",
                 id: uuidv4(),
                 price: "5 780",
                 trending: false,
@@ -593,7 +592,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Overvolt AM 8.7",
+                name: "Overvolt-AM-8.7",
                 id: uuidv4(),
                 price: "6 799",
                 trending: false,
@@ -604,7 +603,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Overvolt AM 7.7",
+                name: "Overvolt-AM-7.7",
                 id: uuidv4(),
                 price: "6 199",
                 trending: false,
@@ -615,7 +614,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Overvolt AM 9.7",
+                name: "Overvolt-AM-9.7",
                 id: uuidv4(),
                 price: "7 999",
                 trending: false,
@@ -631,7 +630,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Supercaliber SLR 9.9",
+                name: "Supercaliber-SLR-9.9",
                 id: uuidv4(),
                 price: "13 999",
                 trending: false,
@@ -642,7 +641,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Supercaliber SLR 9.8",
+                name: "Supercaliber-SLR-9.8",
                 id: uuidv4(),
                 price: "8 999",
                 trending: false,
@@ -653,7 +652,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Top Fuel 9.9",
+                name: "Top-Fuel-9.9",
                 id: uuidv4(),
                 price: "10 999",
                 trending: false,
@@ -664,7 +663,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Top Fuel 9.8 GX",
+                name: "Top-Fuel-9.8 GX",
                 id: uuidv4(),
                 price: "5 999",
                 trending: false,
@@ -682,7 +681,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "S-Works Turbo Kenevo",
+                name: "S-Works-Turbo-Kenevo",
                 id: uuidv4(),
                 price: "16 999",
                 trending: false,
@@ -693,7 +692,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "S-Works Epic World Cup",
+                name: "S-Works-Epic-World-Cup",
                 id: uuidv4(),
                 price: "12 890",
                 trending: false,
@@ -704,7 +703,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Epic 8 Pro",
+                name: "Epic-8-Pro",
                 id: uuidv4(),
                 price: "9 999",
                 trending: false,
@@ -715,7 +714,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Turbo Kenevo SL 2",
+                name: "Turbo-Kenevo-SL-2",
                 id: uuidv4(),
                 price: "7 990",
                 trending: false,
@@ -726,7 +725,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Demo Race",
+                name: "Demo-Race",
                 id: uuidv4(),
                 price: "11 100",
                 trending: false,
@@ -744,7 +743,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "ONE-SIXTY 10K",
+                name: "ONE-SIXTY-10K",
                 id: uuidv4(),
                 price: "9 999",
                 trending: false,
@@ -753,7 +752,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "ONE-SIXTY 8000",
+                name: "ONE-SIXTY-8000",
                 id: uuidv4(),
                 price: "7 000",
                 trending: false,
@@ -762,7 +761,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "ONE-FORTY 6000",
+                name: "ONE-FORTY-6000",
                 id: uuidv4(),
                 price: "11 000",
                 trending: false,
@@ -786,7 +785,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Neuron:ON CF 7",
+                name: "Neuron:ON-CF-7",
                 id: uuidv4(),
                 price: "4 999",
                 trending: false,
@@ -797,7 +796,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Pathlite:ON 6 SUV ",
+                name: "Pathlite:ON-6-SUV ",
                 id: uuidv4(),
                 price: "3 999",
                 trending: false,
@@ -808,7 +807,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Pathlite:ON 5 SUV",
+                name: "Pathlite:ON-5-SUV",
                 id: uuidv4(),
                 price: "4 299",
                 trending: false,
@@ -826,7 +825,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "NYTRO E9 Gravel",
+                name: "NYTRO-E9-Gravel",
                 id: uuidv4(),
                 price: "14 890",
                 trending: false,
@@ -837,7 +836,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "NYTRO E5 ",
+                name: "NYTRO-E5 ",
                 id: uuidv4(),
                 price: "9 999",
                 trending: false,
@@ -846,7 +845,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "NYTRO E7 Road",
+                name: "NYTRO-E7-Road",
                 id: uuidv4(),
                 price: "11 000",
                 trending: false,
@@ -857,7 +856,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "NYTRO E9 Road",
+                name: "NYTRO-E9-Road",
                 id: uuidv4(),
                 price: "12 999",
                 trending: false,
@@ -868,7 +867,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "NYTRO E7 GRAVEL",
+                name: "NYTRO-E7-GRAVEL",
                 id: uuidv4(),
                 price: "17 010",
                 trending: false,
@@ -886,7 +885,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Verve+ 5",
+                name: "Verve-5",
                 id: uuidv4(),
                 price: "5 200",
                 trending: false,
@@ -895,7 +894,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "District+ 1 Lowstep",
+                name: "District-1-Lowstep",
                 id: uuidv4(),
                 price: "4 999",
                 trending: false,
@@ -904,7 +903,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "District+ 5",
+                name: "District-5",
                 id: uuidv4(),
                 price: "7 019",
                 trending: false,
@@ -920,7 +919,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Overvolt AM 7.7",
+                name: "Overvolt-AM-7.7",
                 id: uuidv4(),
                 price: "6 199",
                 trending: true,
@@ -931,7 +930,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Overvolt AM 8.7",
+                name: "Overvolt-AM-8.7",
                 id: uuidv4(),
                 price: "6 799",
                 trending: false,
@@ -942,7 +941,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "e-Urban 3.5",
+                name: "e-Urban-3.5",
                 id: uuidv4(),
                 price: "2 299",
                 trending: false,
@@ -953,7 +952,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "e-Explorer 4.5 High",
+                name: "e-Explorer-4.5-High",
                 id: uuidv4(),
                 price: "2 799",
                 trending: false,
@@ -963,7 +962,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "e-Urban 4.5",
+                name: "e-Urban-4.5",
                 id: uuidv4(),
                 price: "2 699",
                 trending: false,
@@ -983,7 +982,6 @@ export const DATA = [
     category: "Framesets",
     value: "framesets",
     id: uuidv4(),
-    isNested: true,
     featured: [
       {
         type: "Road",
@@ -997,7 +995,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Aeroad CFR",
+                name: "Aeroad-CFR-Frame",
                 id: uuidv4(),
                 price: "7 199",
                 trending: false,
@@ -1006,7 +1004,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Ultimate CFR Disc",
+                name: "Ultimate-CFR-Disc",
                 id: uuidv4(),
                 price: "4 099",
                 trending: false,
@@ -1015,7 +1013,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Ultimate CFR Alpecin",
+                name: "Ultimate-CFR-Alpecin",
                 id: uuidv4(),
                 price: "6 799",
                 trending: false,
@@ -1031,7 +1029,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "S-Works Diverge STR",
+                name: "S-Works-Diverge-STR",
                 id: uuidv4(),
                 price: "4 999",
                 trending: false,
@@ -1040,7 +1038,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Allez Sprint",
+                name: "Allez-Sprint",
                 id: uuidv4(),
                 price: "2 999",
                 trending: false,
@@ -1049,7 +1047,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "S-Works Tarmac SL8",
+                name: "S-Works-Tarmac-SL8",
                 id: uuidv4(),
                 price: "7 299",
                 trending: false,
@@ -1058,7 +1056,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Epic 8 EVO Pro",
+                name: "Epic-8-EVO-Pro",
                 id: uuidv4(),
                 price: "3 299",
                 trending: false,
@@ -1067,7 +1065,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "S-Works Stumpjumper",
+                name: "S-Works-Stumpjumper",
                 id: uuidv4(),
                 price: "5 699",
                 trending: false,
@@ -1083,7 +1081,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "795 Blade",
+                name: "795-Blade",
                 id: uuidv4(),
                 price: "4 299",
                 trending: false,
@@ -1092,7 +1090,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "795 Blade Iconic Edition",
+                name: "795-Blade-Iconic-Edition",
                 id: uuidv4(),
                 price: "5 299",
                 trending: false,
@@ -1108,7 +1106,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Xelius SL",
+                name: "Xelius-SL",
                 id: uuidv4(),
                 price: "3 899",
                 trending: false,
@@ -1132,7 +1130,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Speed Concept SLR",
+                name: "Speed-Concept-SLR",
                 id: uuidv4(),
                 price: "4 599",
                 trending: false,
@@ -1141,7 +1139,7 @@ export const DATA = [
                 ],
               },
               {
-                name: "Speed Concept TT",
+                name: "Speed-Concept-TT",
                 id: uuidv4(),
                 price: "5 199",
                 trending: false,
@@ -1157,7 +1155,7 @@ export const DATA = [
             id: uuidv4(),
             models: [
               {
-                name: "Slick triathlon v2",
+                name: "Slick-triathlon-v2",
                 id: uuidv4(),
                 price: "6 599",
                 trending: false,
@@ -1191,7 +1189,6 @@ export const DATA = [
     category: "Wheels",
     value: "wheels",
     id: uuidv4(),
-    isNested: false,
     featured: [
       {
         type: "Aero",
@@ -1200,13 +1197,13 @@ export const DATA = [
         href: `/wheels/aero`,
         items: [
           {
-            brand: "",
-            kind: "Aero",
+            brand: "Enve",
+            kind: "Enve",
             id: uuidv4(),
             models: [
               {
                 brand: "Enve",
-                name: "SES 4.5",
+                name: "SES-4.5",
                 id: uuidv4(),
                 price: "1 280",
                 trending: false,
@@ -1226,7 +1223,7 @@ export const DATA = [
               },
               {
                 brand: "Enve",
-                name: "SES DISC REAR",
+                name: "SES-DISC-REAR",
                 id: uuidv4(),
                 price: "2 900",
                 trending: false,
@@ -1234,9 +1231,16 @@ export const DATA = [
                   "https://enve.com/cdn/shop/files/SESDisc_Hero.png?v=1709231344&width=1800",
                 ],
               },
+            ],
+          },
+          {
+            brand: "DT Swiss",
+            kind: "DT Swiss",
+            id: uuidv4(),
+            models: [
               {
                 brand: "DT Swiss",
-                name: "ARC 1100",
+                name: "ARC-1100",
                 id: uuidv4(),
                 price: "2 499",
                 trending: false,
@@ -1246,7 +1250,7 @@ export const DATA = [
               },
               {
                 brand: "DT Swiss",
-                name: "ARC 1100 Disc",
+                name: "ARC-1100-Disc",
                 id: uuidv4(),
                 price: "2 399",
                 trending: false,
@@ -1254,9 +1258,16 @@ export const DATA = [
                   "https://www.dtswiss.com/itc/00/00/00/00/00/00/00/00/70/00/11/21/0/PHO_WARC110NIDJC010998_WEB_SHO_001.jpg",
                 ],
               },
+            ],
+          },
+          {
+            brand: "Zipp",
+            kind: "Zipp",
+            id: uuidv4(),
+            models: [
               {
                 brand: "Zipp",
-                name: "858 NSW",
+                name: "858-NSW",
                 id: uuidv4(),
                 price: "2 999",
                 trending: false,
@@ -1266,7 +1277,7 @@ export const DATA = [
               },
               {
                 brand: "Zipp",
-                name: "Super-9 Clincher",
+                name: "Super-9-Clincher",
                 id: uuidv4(),
                 price: "3 200",
                 trending: false,
@@ -1285,13 +1296,13 @@ export const DATA = [
         href: `/wheels/cross-road`,
         items: [
           {
-            brand: "",
-            kind: "Cross Road",
+            bramd: "Enve",
+            kind: "Enve",
             id: uuidv4(),
             models: [
               {
                 brand: "Enve",
-                name: "SES 2.3",
+                name: "SES-2.3",
                 id: uuidv4(),
                 price: "1 200",
                 trending: false,
@@ -1301,7 +1312,7 @@ export const DATA = [
               },
               {
                 brand: "Enve",
-                name: "SES 3.4",
+                name: "SES-3.4",
                 id: uuidv4(),
                 price: "1 300",
                 trending: false,
@@ -1329,9 +1340,16 @@ export const DATA = [
                   "https://enve.com/cdn/shop/files/M735_Side-1024x683_2f280ec1-359c-45d4-9af8-94e3dcc3930c.jpg?v=1690914420&width=1800",
                 ],
               },
+            ],
+          },
+          {
+            bramd: "DT Swiss",
+            kind: "DT Swiss",
+            id: uuidv4(),
+            models: [
               {
                 brand: "DT Swiss",
-                name: "XRC 1200",
+                name: "XRC-1200",
                 id: uuidv4(),
                 price: "2 999",
                 trending: false,
@@ -1341,7 +1359,7 @@ export const DATA = [
               },
               {
                 brand: "DT Swiss",
-                name: "XRC 1501",
+                name: "XRC-1501",
                 id: uuidv4(),
                 price: "2 200",
                 trending: false,
@@ -1349,9 +1367,16 @@ export const DATA = [
                   "https://www.dtswiss.com/dam/00/00/00/00/00/00/00/10/00/00/03/67/2/PHO_AAAAQX_XRC1501_WEB_SHO_001.jpg",
                 ],
               },
+            ],
+          },
+          {
+            bramd: "Zipp",
+            kind: "Zipp",
+            id: uuidv4(),
+            models: [
               {
                 brand: "Zipp",
-                name: "353 NSW",
+                name: "353-NSW",
                 id: uuidv4(),
                 price: "1 299",
                 trending: false,
@@ -1361,7 +1386,7 @@ export const DATA = [
               },
               {
                 brand: "Zipp",
-                name: "1ZERO HITOP SW",
+                name: "1ZERO-HITOP-SW",
                 id: uuidv4(),
                 price: "999",
                 trending: false,
@@ -1371,7 +1396,7 @@ export const DATA = [
               },
               {
                 brand: "Zipp",
-                name: "1ZERO HITOP S",
+                name: "1ZERO-HITOP-S",
                 id: uuidv4(),
                 price: "1 399",
                 trending: false,

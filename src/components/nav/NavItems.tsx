@@ -87,20 +87,20 @@ const NavItems = () => {
           <div key={data.id}>
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className="hover:bg-transparent data-[state=open]:bg-transparent 
-              data-[state=open]:text-custom"
+                className="hover:bg-transparent
+              data-[state=open]:bg-transparent data-[state=open]:text-custom"
                 onMouseEnter={() => handleCatImage(data.value)}
               >
-                <div className="mx-2 text-base font-medium uppercase">
+                <div className="mx-2 text-base font-medium">
                   {data.category}
                 </div>
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-muted">
                 <div
                   className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] 
-                rounded-sm border-[1px] bg-white"
+                rounded-md border-[1px] bg-white"
                 >
-                  <div className="rounded-bl-sm rounded-tl-sm">
+                  <div className="rounded-bl-md rounded-tl-md">
                     {data.featured.map((item) => (
                       <div key={item.id}>
                         <div className="mx-4">
@@ -112,9 +112,7 @@ const NavItems = () => {
                               })} w-full py-3`}
                               onMouseEnter={() => handleTypeImage(item.value)}
                             >
-                              <div className="w-full text-lg uppercase">
-                                {item.type}
-                              </div>
+                              <div className="w-full text-lg">{item.type}</div>
                             </div>
                           </Link>
                           <Separator />
@@ -140,7 +138,9 @@ const NavItems = () => {
                         size: "no-padding-x",
                       })} mx-8 mb-8 `}
                     >
-                      <div className="font-light">View All {data.category}</div>
+                      <div className="text-base font-light">
+                        View all {data.value}
+                      </div>
                     </div>
                   </Link>
                 </div>
@@ -150,7 +150,7 @@ const NavItems = () => {
         ))}
         <div className="px-4">
           <Link
-            href="/world-tour"
+            href="/blog"
             className={buttonVariants({
               variant: "link-secondary",
               size: "no-padding-x",

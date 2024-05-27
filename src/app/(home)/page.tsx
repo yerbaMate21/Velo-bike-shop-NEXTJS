@@ -13,86 +13,9 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Separator } from "@/components/ui/separator";
+import { HOME_CAROUSEL, HOME_MARQUEE, HOME_GRID } from "@/constants";
 import { DATA } from "@/utils/data";
 import { Card, CardContent } from "@/components/ui/card";
-
-let carouselItems: {
-  image: string;
-  title: string;
-  desc: string;
-  btnDesc: string;
-  href: string;
-}[] = [
-  {
-    image: "/images/home-carousel-1.webp",
-    title: "Lets's get started.",
-    desc: "Conquer every mountain and crush every finish line with the Colnago V4Rs",
-    btnDesc: "Shop Now",
-    href: "/bikes/road/Colnago/V4Rs",
-  },
-  {
-    image: "/images/home-carousel-2.avif",
-    title: "Electric bikes",
-    desc: "Like riding a bike, but with a little extra power",
-    btnDesc: "See the bikes",
-    href: "/bikes/e-bike",
-  },
-  {
-    image: "/images/forest-mtb.jpg",
-    title: "Mountain Bikes",
-    desc: "Full-suspension or hardtail? 29er or 27.5? Electric mountain bike or pedal power? We’ve got you covered.",
-    btnDesc: "See the bikes",
-    href: "/bikes/mtb",
-  },
-];
-
-let marqueeItems: {
-  image: string;
-  desc: string;
-}[] = [
-  {
-    image: "/images/6-years-guarantee.svg",
-    desc: "6 year guarantee",
-  },
-  {
-    image: "/images/thirty-days-return-svg.svg",
-    desc: "Simple returns",
-  },
-  {
-    image: "/images/Icon_servicing.svg",
-    desc: "Servicing made simple",
-  },
-  {
-    image: "/images/flexible-payment.svg",
-    desc: "Flexible ways to pay",
-  },
-  {
-    image: "/images/d2c-rightsize.svg",
-    desc: "The right size, guaranteed",
-  },
-];
-
-let gridItems: {
-  image: string;
-  title: string;
-}[] = [
-  {
-    image: "/images/road-bikes.webp",
-    title: "road",
-  },
-  {
-    image: "/images/gravel-bikes.webp",
-    title: "gravel",
-  },
-  {
-    image: "/images/mountain-bikes.jpg",
-    title: "mtb",
-  },
-  {
-    image: "/images/electric-bikes.jpg",
-    title: "e-bike",
-  },
-];
 
 const Page = () => {
   return (
@@ -107,7 +30,7 @@ const Page = () => {
           ]}
         >
           <CarouselContent>
-            {carouselItems.map((item, index) => (
+            {HOME_CAROUSEL.map((item, index) => (
               <CarouselItem
                 key={index}
                 className="relative flex h-full min-h-[600px] w-full cursor-grab 
@@ -156,7 +79,7 @@ const Page = () => {
       <section>
         <div className="relative flex overflow-x-hidden bg-black">
           <div className="flex animate-marquee whitespace-nowrap py-3">
-            {marqueeItems.map((item, index) => (
+            {HOME_MARQUEE.map((item, index) => (
               <div key={index} className="flex items-center">
                 <Separator
                   orientation="vertical"
@@ -175,7 +98,7 @@ const Page = () => {
             ))}
           </div>
           <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap py-3">
-            {marqueeItems.map((item, index) => (
+            {HOME_MARQUEE.map((item, index) => (
               <div key={index} className="flex items-center">
                 <Separator
                   orientation="vertical"
@@ -222,7 +145,7 @@ const Page = () => {
                   </p>
                   <div className="mt-6">
                     <Link
-                      href="/bikes/e-bike/Trek/District+ 5"
+                      href={`/bikes/e-bike/Trek_District-5`.replace("+", "+")}
                       className={buttonVariants({
                         variant: "secondary",
                         size: "lg",
@@ -260,7 +183,7 @@ const Page = () => {
                             className="group pl-2 lg:basis-1/2"
                           >
                             <Link
-                              href={`${item.href}/${product_group.brand}/${product.name}`}
+                              href={`${item.href}/${product_group.kind}_${product.name}`}
                             >
                               <Card className="relative aspect-video overflow-hidden">
                                 <CardContent>
@@ -285,9 +208,9 @@ const Page = () => {
                             <div className="px-2">
                               <div className="mb-2 mt-4 transition-all hover:text-custom lg:text-lg">
                                 <Link
-                                  href={`${item.href}/${product_group.brand}/${product.name}`}
+                                  href={`${item.href}/${product_group.kind}_${product.name}`}
                                 >
-                                  {product_group.brand} {product.name}
+                                  {product_group.kind} {product.name}
                                 </Link>
                               </div>
                               <div className="text-muted-foreground">
@@ -318,7 +241,7 @@ const Page = () => {
             <h2 className="text-2xl font-bold lg:text-3xl">Shop by world</h2>
           </div>
           <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
-            {gridItems.map((item, index) => (
+            {HOME_GRID.map((item, index) => (
               <div key={index} className="transition-all hover:-translate-y-1">
                 <Link href={`/bikes/${item.title}`}>
                   <div className="relative">
@@ -349,7 +272,7 @@ const Page = () => {
             </h2>
           </div>
           <div className="grid h-full w-full gap-2.5 lg:grid-cols-2">
-            <Link href="/wheels/cross-road/Zipp/353 NSW">
+            <Link href="/wheels/cross-road/Zipp_353-NSW">
               <div className="lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted">
                   <Image
@@ -375,7 +298,7 @@ const Page = () => {
               </div>
             </Link>
 
-            <Link href="/bikes/e-bike/Pinarello/NYTRO E9 Gravel">
+            <Link href="/bikes/e-bike/Pinarello_NYTRO-E9-Gravel">
               <div className="lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted-foreground/20">
                   <Image
@@ -407,7 +330,7 @@ const Page = () => {
         <MaxWidthWrapper className="py-4 lg:py-8">
           <div className="relative aspect-video h-full max-h-screen min-h-[calc(100vh-150px)] w-full">
             <Image
-              src="/images/home-carousel-3.webp"
+              src="/images/mvdp.webp"
               alt="home-section-image"
               fill
               className="rounded-md object-cover object-center"
@@ -427,7 +350,7 @@ const Page = () => {
                   </p>
                   <div className="mt-6">
                     <Link
-                      href="/bikes/road/Canyon/Aeroad CFR"
+                      href="/bikes/road/Canyon_Aeroad-CFR"
                       className={buttonVariants({
                         variant: "secondary",
                         size: "lg",

@@ -1,16 +1,16 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/nav/Navbar";
 
-export default function ProductLayout({
+export default function ProductsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <div>
       <Navbar />
-      {children}
+      <div className="bg-muted">{children}</div>
       <Footer />
-    </section>
+    </div>
   );
 }

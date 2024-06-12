@@ -1,4 +1,5 @@
 import { DATA } from "@/utils/data";
+import Link from "next/link";
 
 interface PageProps {
   params: {
@@ -13,12 +14,14 @@ const Page = ({ params }: PageProps) => {
 
   return (
     <div>
-      <div className="text-4xl">{category}</div>
+      <div className="bg-orange-500 text-center text-4xl">{category}</div>
       <div className="text-lg">
         {productsByCategory?.featured.map((item) => (
-          <div key={item.id}>
-            <div>{item.type}</div>
-          </div>
+          <Link key={item.id} href={`/${category}/${item.value}`}>
+            <div className="m-2 border-2 border-black">
+              <div>{item.type}</div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

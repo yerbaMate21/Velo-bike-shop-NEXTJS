@@ -17,6 +17,8 @@ const nextConfig = {
       "www.sram.com",
       "images.unsplash.com",
       "colnagopolska.pl",
+      "d2lljesbicak00.cloudfront.net",
+      "www.trifanatics.es",
     ],
   },
 };

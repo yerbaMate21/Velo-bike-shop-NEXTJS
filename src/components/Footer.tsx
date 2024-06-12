@@ -6,7 +6,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const Footer = () => {
   return (
-    <footer className="flex-grow-0 bg-zinc-700 text-white">
+    <footer className="flex-grow-0 bg-muted-foreground text-white">
       <MaxWidthWrapper>
         <div className="py-10 md:flex md:items-center md:justify-between">
           <Image

@@ -116,7 +116,6 @@ const Page = () => {
               </div>
             ))}
           </div>
-          ss
         </div>
       </section>
 
@@ -138,14 +137,17 @@ const Page = () => {
                   px-12 py-28 text-center text-white lg:mx-0 lg:items-start"
                 >
                   <h2 className="text-3xl font-bold uppercase lg:text-4xl">
-                    District+ 5
+                    Pathlite ON 6 SUV
                   </h2>
                   <p className="mt-6 max-w-prose text-xl lg:text-start lg:text-2xl">
                     Bring joy to your schedule and ease into the everyday.
                   </p>
                   <div className="mt-6">
                     <Link
-                      href={`/bikes/e-bike/Trek_District-5`.replace("+", "+")}
+                      href={`/bikes/e-bike/Canyon_Pathlite-ON-6-SUV`.replace(
+                        "+",
+                        "+",
+                      )}
                       className={buttonVariants({
                         variant: "secondary",
                         size: "lg",
@@ -162,77 +164,77 @@ const Page = () => {
       </section>
 
       <section>
-        <MaxWidthWrapper className="py-4 lg:py-8">
+        <MaxWidthWrapper className="pt-4 lg:pt-8">
           <div className="py-3">
             <h2 className="text-2xl font-bold lg:text-3xl">Most Wanted</h2>
             <div className="py-4 text-xl lg:text-2xl">
               The bikes everyone is talking about.
             </div>
           </div>
+        </MaxWidthWrapper>
 
-          <Carousel opts={{ loop: true, align: "start" }}>
-            <CarouselContent className="-ml-2 py-4">
-              {DATA.map((data) =>
-                data.featured.map((item) =>
-                  item.items.map((product_group) =>
-                    product_group.models.map(
-                      (product) =>
-                        product.trending && (
-                          <CarouselItem
-                            key={product.id}
-                            className="group pl-2 lg:basis-1/2"
+        <Carousel opts={{ loop: true, align: "start" }}>
+          <CarouselContent className="-ml-2 max-w-screen-2xl py-4">
+            {DATA.map((data) =>
+              data.featured.map((item) =>
+                item.items.map((product_group) =>
+                  product_group?.models.map(
+                    (product) =>
+                      product.trending && (
+                        <CarouselItem
+                          key={product.id}
+                          className="group pl-2 lg:basis-1/2"
+                        >
+                          <Link
+                            href={`${item.href}/${product_group?.kind}_${product.name}`}
                           >
-                            <Link
-                              href={`${item.href}/${product_group.kind}_${product.name}`}
-                            >
-                              <Card className="relative aspect-video overflow-hidden">
-                                <CardContent>
-                                  <Image
-                                    src={product.images[0]}
-                                    alt={`${product.name}-image`}
-                                    fill
-                                    className="object-cover object-center"
-                                  />
-                                  <div
-                                    className="absolute bottom-2 left-2 right-2 flex items-center
-                                    justify-center whitespace-nowrap rounded-md bg-muted py-2 
-                                    text-center opacity-0 shadow-md 
-                                    transition-all group-hover:opacity-100 lg:bottom-10 lg:left-20 lg:right-20"
-                                  >
-                                    Quick view
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            </Link>
-
-                            <div className="px-2">
-                              <div className="mb-2 mt-4 transition-all hover:text-custom lg:text-lg">
-                                <Link
-                                  href={`${item.href}/${product_group.kind}_${product.name}`}
+                            <Card className="relative aspect-video overflow-hidden shadow-md">
+                              <CardContent>
+                                <Image
+                                  src={product.images[0]}
+                                  alt={`${product.name}-image`}
+                                  fill
+                                  className="object-cover object-center"
+                                />
+                                <div
+                                  className="absolute bottom-2 left-2 right-2 flex items-center
+                                    justify-center whitespace-nowrap rounded-md bg-white
+                                    py-2 text-center opacity-0 shadow-md transition-all hover:bg-muted
+                                    group-hover:opacity-100 lg:bottom-10 lg:left-20 lg:right-20"
                                 >
-                                  {product_group.kind} {product.name}
-                                </Link>
-                              </div>
-                              <div className="text-muted-foreground">
-                                {item.type}
-                              </div>
-                              <div className="text-lg">
-                                {product.price} &euro;
-                              </div>
+                                  Quick view
+                                </div>
+                              </CardContent>
+                            </Card>
+                          </Link>
+
+                          <div className="px-4">
+                            <div className="mb-2 mt-4 transition-all hover:text-custom lg:text-lg">
+                              <Link
+                                href={`${item.href}/${product_group?.kind}_${product.name}`}
+                              >
+                                {product_group?.kind} {product.name}
+                              </Link>
                             </div>
-                          </CarouselItem>
-                        ),
-                    ),
+                            <div className="text-muted-foreground">
+                              {item.type}
+                            </div>
+                            <div className="text-lg">
+                              {product.price} &euro;
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ),
                   ),
                 ),
-              )}
-            </CarouselContent>
-            <div className="absolute -top-2 right-0 mx-12">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </Carousel>
-        </MaxWidthWrapper>
+              ),
+            )}
+          </CarouselContent>
+          <div className="absolute -top-2 right-0 mx-12">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+        </Carousel>
       </section>
 
       <section className="bg-white">
@@ -272,8 +274,8 @@ const Page = () => {
             </h2>
           </div>
           <div className="grid h-full w-full gap-2.5 lg:grid-cols-2">
-            <Link href="/wheels/cross-road/Zipp_353-NSW">
-              <div className="lg:basis-1/2">
+            <Link href="/wheels/light/Zipp_353-NSW">
+              <div className="shadow-md lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted">
                   <Image
                     src="/images/product-week-1.webp"
@@ -299,7 +301,7 @@ const Page = () => {
             </Link>
 
             <Link href="/bikes/e-bike/Pinarello_NYTRO-E9-Gravel">
-              <div className="lg:basis-1/2">
+              <div className="shadow-md lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted-foreground/20">
                   <Image
                     src="/images/product-week-2.png"

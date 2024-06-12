@@ -1,4 +1,5 @@
 import { DATA } from "@/utils/data";
+import Link from "next/link";
 
 interface PageProps {
   params: {
@@ -26,11 +27,15 @@ const Page = ({ params }: PageProps) => {
             {product.models.map((model) => (
               <div
                 key={model.id}
-                className="flex justify-around gap-4 border-[1px] border-black"
+                className="m-2 flex justify-around gap-4 border-[1px] border-black"
               >
-                <div>{product.kind}</div>
-                <div>{model.name}</div>
-                <div>{model.price}</div>
+                <Link
+                  href={`/${category}/${categoryType}/${product.kind}_${model.name}`}
+                >
+                  <div>{product.kind}</div>
+                  <div>{model.name}</div>
+                  <div>{model.price}</div>
+                </Link>
               </div>
             ))}
           </div>

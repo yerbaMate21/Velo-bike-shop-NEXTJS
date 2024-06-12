@@ -52,11 +52,11 @@ let itemsImages: { category: string; src: string }[] = [
     src: "/images/aerodynamic.webp",
   },
   {
-    category: "aero",
+    category: "speed",
     src: "/images/aero-wheels.avif",
   },
   {
-    category: "cross-road",
+    category: "light",
     src: "/images/cross-road-wheels.avif",
   },
 ];

@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Navbar from "@/components/nav/Navbar";
+import ProductFooter from "@/components/ProductFooter";
 
 export default function ProductsLayout({
   children,
@@ -10,7 +11,10 @@ export default function ProductsLayout({
   return (
     <div className="bg-muted">
       <Navbar />
-      <MaxWidthWrapper className="py-4 lg:py-8">{children}</MaxWidthWrapper>
+      <MaxWidthWrapper className="py-6 lg:py-12">
+        <div>{children}</div>
+        <ProductFooter />
+      </MaxWidthWrapper>
       <Footer />
     </div>
   );

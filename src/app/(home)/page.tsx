@@ -275,7 +275,7 @@ const Page = () => {
           </div>
           <div className="grid h-full w-full gap-2.5 lg:grid-cols-2">
             <Link href="/wheels/light/Zipp_353-NSW">
-              <div className="shadow-md lg:basis-1/2">
+              <div className="lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted">
                   <Image
                     src="/images/product-week-1.webp"
@@ -301,7 +301,7 @@ const Page = () => {
             </Link>
 
             <Link href="/bikes/e-bike/Pinarello_NYTRO-E9-Gravel">
-              <div className="shadow-md lg:basis-1/2">
+              <div className="lg:basis-1/2">
                 <div className="relative aspect-video rounded-tl-md rounded-tr-md bg-muted-foreground/20">
                   <Image
                     src="/images/product-week-2.png"

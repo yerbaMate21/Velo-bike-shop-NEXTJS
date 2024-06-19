@@ -20,12 +20,8 @@ let itemsImages: { category: string; src: string }[] = [
     src: "/images/bikes.png",
   },
   {
-    category: "framesets",
-    src: "/images/framesets.webp",
-  },
-  {
-    category: "wheels",
-    src: "/images/wheels.webp",
+    category: "components",
+    src: "/images/components.jpg",
   },
   {
     category: "road",
@@ -44,20 +40,12 @@ let itemsImages: { category: string; src: string }[] = [
     src: "/images/e-bike.webp",
   },
   {
-    category: "road-frame",
-    src: "/images/road-frame.avif",
+    category: "framesets",
+    src: "/images/framesets.webp",
   },
   {
-    category: "aerodynamic",
-    src: "/images/aerodynamic.webp",
-  },
-  {
-    category: "speed",
-    src: "/images/aero-wheels.avif",
-  },
-  {
-    category: "light",
-    src: "/images/cross-road-wheels.avif",
+    category: "wheels",
+    src: "/images/wheels.webp",
   },
 ];
 
@@ -82,7 +70,7 @@ const NavItems = () => {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className="gap-4">
         {DATA.map((data) => (
           <div key={data.id}>
             <NavigationMenuItem>

@@ -1044,15 +1044,15 @@ export const DATA = [
     ],
   },
   {
-    category: "Framesets",
-    value: "framesets",
+    category: "Components",
+    value: "components",
     id: uuidv4(),
     featured: [
       {
-        type: "Road",
-        value: "road-frame",
+        type: "Framesets",
+        value: "framesets",
         id: uuidv4(),
-        href: `/framesets/road`,
+        href: `/components/framesets`,
         items: [
           {
             brand: "Canyon",
@@ -1159,14 +1159,6 @@ export const DATA = [
               },
             ],
           },
-        ],
-      },
-      {
-        type: "Aero",
-        value: "aerodynamic",
-        id: uuidv4(),
-        href: `/framesets/aerodynamic`,
-        items: [
           {
             brand: "Trek",
             kind: "Trek",
@@ -1208,18 +1200,11 @@ export const DATA = [
           },
         ],
       },
-    ],
-  },
-  {
-    category: "Wheels",
-    value: "wheels",
-    id: uuidv4(),
-    featured: [
       {
-        type: "Speed",
-        value: "speed",
+        type: "Wheels",
+        value: "wheels",
         id: uuidv4(),
-        href: `/wheels/speed`,
+        href: `/components/wheels`,
         items: [
           {
             brand: "Enve",
@@ -1333,16 +1318,8 @@ export const DATA = [
               },
             ],
           },
-        ],
-      },
-      {
-        type: "Light",
-        value: "light",
-        id: uuidv4(),
-        href: `/wheels/light`,
-        items: [
           {
-            bramd: "Enve",
+            brand: "Enve",
             kind: "Enve",
             id: uuidv4(),
             models: [
@@ -1401,7 +1378,7 @@ export const DATA = [
             ],
           },
           {
-            bramd: "DT Swiss",
+            brand: "DT Swiss",
             kind: "DT Swiss",
             id: uuidv4(),
             models: [
@@ -1434,7 +1411,7 @@ export const DATA = [
             ],
           },
           {
-            bramd: "Zipp",
+            brand: "Zipp",
             kind: "Zipp",
             id: uuidv4(),
             models: [

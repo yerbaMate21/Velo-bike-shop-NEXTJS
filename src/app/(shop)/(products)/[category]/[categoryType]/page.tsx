@@ -23,8 +23,8 @@ const Page = ({ params }: PageProps) => {
 
       <div>
         {productsByType?.items.map((product) => (
-          <div key={product.id}>
-            {product.models.map((model) => (
+          <div key={product?.id}>
+            {product?.models.map((model) => (
               <div
                 key={model.id}
                 className="m-2 flex justify-around gap-4 border-[1px] border-black"

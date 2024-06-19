@@ -64,3 +64,127 @@ export const HOME_GRID = [
     title: "e-bike",
   },
 ];
+
+export const PRODUCT_FOOTER = [
+  {
+    image: "/images/ico-warranty.svg",
+    title: "WARRANTY",
+  },
+  {
+    image: "/images/ico-false-frame.svg",
+    title: "FALSE FRAMES",
+  },
+  {
+    image: "/images/ico-register-frame.svg",
+    title: "FRAME REGISTRATION",
+  },
+  {
+    image: "/images/ico-downloads.svg",
+    title: "DOWNLOAD",
+  },
+  {
+    image: "/images/ico-ecommerce.svg",
+    title: "ECOMMERCE ORDERS",
+  },
+];
+
+export const GEOMETRIES_BIKE = [
+  {
+    dimension: "A seat tube length (mm)",
+    s: "490",
+    m: "520",
+    l: "550",
+    xl: "580",
+  },
+  {
+    dimension: "B Top tube length (mm)",
+    s: "538",
+    m: "558",
+    l: "575",
+    xl: "595",
+  },
+  {
+    dimension: "C head tube length (mm)",
+    s: "150",
+    m: "170",
+    l: "186",
+    xl: "205",
+  },
+  {
+    dimension: "D head tube angle (°)",
+    s: "71",
+    m: "71,5",
+    l: "71,5",
+    xl: "71,5",
+  },
+  {
+    dimension: "E seat angle (°)",
+    s: "74",
+    m: "73,5",
+    l: "73,5",
+    xl: "73",
+  },
+  {
+    dimension: "F BB drop (mm)",
+    s: "72",
+    m: "72",
+    l: "72",
+    xl: "70",
+  },
+  {
+    dimension: "G chainstay length (mm)",
+    s: "435",
+    m: "435",
+    l: "435",
+    xl: "435",
+  },
+  {
+    dimension: "H wheelbase (mm)",
+    s: "1025,1",
+    m: "1035,4",
+    l: "1053",
+    xl: "1068,6",
+  },
+  {
+    dimension: "J reach (mm)",
+    s: "372,6",
+    m: "381",
+    l: "393,5",
+    xl: "402,7",
+  },
+  {
+    dimension: "K stack (mm)",
+    s: "576,8",
+    m: "597,7",
+    l: "612,85",
+    xl: "628,9",
+  },
+  {
+    dimension: "M Standover height (100 mm in front of BB) (mm)",
+    s: "803",
+    m: "828",
+    l: "850,2",
+    xl: "874,6",
+  },
+  {
+    dimension: "P Fork offset (mm)",
+    s: "47",
+    m: "47",
+    l: "47",
+    xl: "47",
+  },
+  {
+    dimension: "U fork length (mm)",
+    s: "402",
+    m: "402",
+    l: "402",
+    xl: "402",
+  },
+  {
+    dimension: "X recommended size (cm)",
+    s: "172-178",
+    m: "178-184",
+    l: "184-190",
+    xl: "190-195",
+  },
+];

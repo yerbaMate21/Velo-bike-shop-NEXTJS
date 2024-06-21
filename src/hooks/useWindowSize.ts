@@ -5,7 +5,7 @@ type TWindowSize = [number, number];
 type THook = TWindowSize;
 
 export const useWindowSize = (): THook => {
-  const [windowSize, setWindowSize] = useState<TWindowSize>([0, 0]);
+  const [windowSize, setWindowSize] = useState<TWindowSize>([1500, 1500]);
 
   useEffect(() => {
     const handleResize = (): void => {

@@ -65,6 +65,7 @@ export const HOME_GRID = [
   },
 ];
 
+// product page
 export const PRODUCT_FOOTER = [
   {
     image: "/images/ico-warranty.svg",
@@ -186,5 +187,173 @@ export const GEOMETRIES_BIKE = [
     m: "178-184",
     l: "184-190",
     xl: "190-195",
+  },
+];
+
+// footer
+export const FOOTER_ITEMS = [
+  {
+    title: "About Us",
+    items: [
+      {
+        title: "Explore the brand",
+        href: "",
+      },
+      {
+        title: "Contact",
+        href: "",
+      },
+      {
+        title: "Terms & Conditions",
+        href: "",
+      },
+      {
+        title: "Legal Disclosure",
+        href: "",
+      },
+      {
+        title: "Data Protection Statement",
+        href: "",
+      },
+      {
+        title: "Compliance",
+        href: "",
+      },
+    ],
+  },
+  {
+    title: "Explore",
+    items: [
+      {
+        title: "News & Stories",
+        href: "",
+      },
+      {
+        title: "Experience Partners",
+        href: "",
+      },
+      {
+        title: "Pro Sports",
+        href: "",
+      },
+      {
+        title: "Events",
+        href: "",
+      },
+      {
+        title: "Member Benefits",
+        href: "",
+      },
+    ],
+  },
+  {
+    title: "Customer Service",
+    items: [
+      {
+        title: "Support Centre",
+        href: "",
+      },
+      {
+        title: "Find a Service Location",
+        href: "",
+      },
+      {
+        title: "Shipping",
+        href: "",
+      },
+      {
+        title: "Payment & Financing",
+        href: "",
+      },
+      {
+        title: "Warranty & Guarantee",
+        href: "",
+      },
+      {
+        title: "Returns",
+        href: "",
+      },
+      {
+        title: "Track Your Order",
+        href: "",
+      },
+    ],
+  },
+  {
+    title: "Bike Worlds",
+    items: [
+      {
+        title: "Road",
+        href: "/bikes/road",
+      },
+      {
+        title: "Gravel",
+        href: "/bikes/gravel",
+      },
+      {
+        title: "Mtb",
+        href: "/bikes/mtb",
+      },
+      {
+        title: "e-Bike",
+        href: "/bikes/e-bike",
+      },
+      {
+        title: "Components",
+        href: "/components",
+      },
+      {
+        title: "All Bikes",
+        href: "/bikes",
+      },
+    ],
+  },
+];
+
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaStrava,
+  FaTiktok,
+} from "react-icons/fa";
+
+type Props = {
+  name: String;
+  icon: React.ReactNode;
+};
+
+export const FOOTER_MEDIA: Props[] = [
+  {
+    name: "Facebook",
+    icon: <FaFacebook size={24} />,
+  },
+  {
+    name: "Instagram",
+    icon: <FaInstagram size={24} />,
+  },
+  {
+    name: "Youtube",
+    icon: <FaYoutube size={24} />,
+  },
+  {
+    name: "Strava",
+    icon: <FaStrava size={24} />,
+  },
+  {
+    name: "Tiktok",
+    icon: <FaTiktok size={24} />,
+  },
+];
+
+export const FOOTER_DOWNLOAD = [
+  {
+    name: "apple-store",
+    image: "/images/app-store.svg",
+  },
+  {
+    name: "google-play",
+    image: "/images/google-play.svg",
   },
 ];

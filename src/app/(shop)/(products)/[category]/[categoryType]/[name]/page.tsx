@@ -55,7 +55,7 @@ const Page = ({ params }: { params: PageProps }) => {
               model.name === productName &&
               (product = {
                 category: data.value,
-                type: f.value,
+                type: f.type,
                 brand: item.kind,
                 id: model.id,
                 title: model.name,

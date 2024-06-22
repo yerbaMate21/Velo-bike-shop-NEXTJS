@@ -126,7 +126,7 @@ const Page = () => {
               autoPlay
               loop
               muted
-              className="h-full max-h-screen min-h-[600px] w-full rounded-md object-cover object-center"
+              className="h-full max-h-[calc(100vh-100px)] min-h-[450px] w-full rounded-md object-cover object-center"
             >
               <source src="/videos/e.mp4" type="video/mp4" />
             </video>
@@ -327,7 +327,7 @@ const Page = () => {
 
       <section className="bg-white">
         <MaxWidthWrapper className="py-4 lg:py-8">
-          <div className="relative aspect-video h-full max-h-screen min-h-[600px] w-full">
+          <div className="relative aspect-video h-full max-h-[calc(100vh-100px)] min-h-[450px] w-full">
             <Image
               src="/images/mvdp.webp"
               alt="home-section-image"

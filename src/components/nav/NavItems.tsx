@@ -13,47 +13,13 @@ import { buttonVariants } from "../ui/button";
 import { useState } from "react";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
-
-let itemsImages: { category: string; src: string }[] = [
-  {
-    category: "bikes",
-    src: "/images/bikes.png",
-  },
-  {
-    category: "components",
-    src: "/images/components.jpg",
-  },
-  {
-    category: "road",
-    src: "/images/road.jpeg",
-  },
-  {
-    category: "gravel",
-    src: "/images/gravel.jpeg",
-  },
-  {
-    category: "mtb",
-    src: "/images/mtb.jpeg",
-  },
-  {
-    category: "e-bike",
-    src: "/images/e-bike.webp",
-  },
-  {
-    category: "framesets",
-    src: "/images/framesets.webp",
-  },
-  {
-    category: "wheels",
-    src: "/images/wheels.webp",
-  },
-];
+import { NAV_ITEMS } from "@/constants";
 
 const NavItems = () => {
   const [catImage, setCatImage] = useState<string>("");
 
   const handleCatImage = (value: string) => {
-    itemsImages.map((item) => {
+    NAV_ITEMS.map((item) => {
       if (item.category === value) {
         setCatImage(item.src);
       }
@@ -61,7 +27,7 @@ const NavItems = () => {
   };
 
   const handleTypeImage = (value: string) => {
-    itemsImages.map((item) => {
+    NAV_ITEMS.map((item) => {
       if (item.category === value) {
         setCatImage(item.src);
       }

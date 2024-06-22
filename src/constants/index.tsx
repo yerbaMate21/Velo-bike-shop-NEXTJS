@@ -1,5 +1,47 @@
+//nav
+export const NAV_ITEMS: { category: string; src: string }[] = [
+  {
+    category: "bikes",
+    src: "/images/bikes.png",
+  },
+  {
+    category: "components",
+    src: "/images/components.jpg",
+  },
+  {
+    category: "road",
+    src: "/images/road.jpeg",
+  },
+  {
+    category: "gravel",
+    src: "/images/gravel.jpeg",
+  },
+  {
+    category: "mtb",
+    src: "/images/mtb.jpeg",
+  },
+  {
+    category: "e-bike",
+    src: "/images/e-bike.webp",
+  },
+  {
+    category: "framesets",
+    src: "/images/framesets.webp",
+  },
+  {
+    category: "wheels",
+    src: "/images/wheels.webp",
+  },
+];
+
 // home
-export const HOME_CAROUSEL = [
+export const HOME_CAROUSEL: {
+  image: string;
+  title: string;
+  desc: string;
+  btnDesc: string;
+  href: string;
+}[] = [
   {
     image: "/images/home-carousel-1.webp",
     title: "Lets's get started.",
@@ -23,7 +65,7 @@ export const HOME_CAROUSEL = [
   },
 ];
 
-export const HOME_MARQUEE = [
+export const HOME_MARQUEE: { image: string; desc: string }[] = [
   {
     image: "/images/6-years-guarantee.svg",
     desc: "6 year guarantee",
@@ -46,7 +88,7 @@ export const HOME_MARQUEE = [
   },
 ];
 
-export const HOME_GRID = [
+export const HOME_GRID: { image: string; title: string }[] = [
   {
     image: "/images/road-bikes.webp",
     title: "road",
@@ -66,7 +108,7 @@ export const HOME_GRID = [
 ];
 
 // product page
-export const PRODUCT_FOOTER = [
+export const PRODUCT_FOOTER: { image: string; title: string }[] = [
   {
     image: "/images/ico-warranty.svg",
     title: "WARRANTY",
@@ -89,7 +131,13 @@ export const PRODUCT_FOOTER = [
   },
 ];
 
-export const GEOMETRIES_BIKE = [
+export const GEOMETRIES_BIKE: {
+  dimension: string;
+  s: string;
+  m: string;
+  l: string;
+  xl: string;
+}[] = [
   {
     dimension: "A seat tube length (mm)",
     s: "490",
@@ -191,7 +239,10 @@ export const GEOMETRIES_BIKE = [
 ];
 
 // footer
-export const FOOTER_ITEMS = [
+export const FOOTER_ITEMS: {
+  title: string;
+  items: { title: string; href: string }[];
+}[] = [
   {
     title: "About Us",
     items: [
@@ -320,7 +371,7 @@ import {
 } from "react-icons/fa";
 
 type Props = {
-  name: String;
+  name: string;
   icon: React.ReactNode;
 };
 

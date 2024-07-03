@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <Sheet>
       <SheetTrigger
-        className={`${buttonVariants({ variant: "ghost", size: "sm" })} z-50`}
+        className={buttonVariants({ variant: "ghost", size: "sm" })}
       >
         <ShoppingCart />
       </SheetTrigger>

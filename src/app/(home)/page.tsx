@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Separator } from "@/components/ui/separator";
-import { HOME_CAROUSEL, HOME_MARQUEE, HOME_GRID } from "@/constants";
+import { HOME_CAROUSEL, HOME_MARQUEE, BIKES_CATEGORY_LIST } from "@/constants";
 import { DATA } from "@/utils/data";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -43,16 +43,19 @@ const Page = () => {
                   fill
                   className="-z-10 object-cover object-center"
                 />
-                <div className="from-0 absolute inset-0 left-0 top-0 -z-10 h-full w-full bg-gradient-to-t from-black/50" />
+                <div
+                  className="from-0 absolute inset-0 left-0 top-0 -z-10 
+                h-full w-full bg-gradient-to-t from-black/80"
+                />
                 <MaxWidthWrapper>
                   <div
-                    className="mx-auto flex max-w-3xl flex-col items-center
-                  px-16 py-28 text-center lg:mx-0 lg:mt-24 lg:items-start lg:text-start"
+                    className="mx-auto flex max-w-3xl flex-col items-center px-16
+                  py-28 text-center text-white lg:mx-0 lg:mt-24 lg:items-start lg:text-start"
                   >
-                    <h1 className="text-5xl font-bold tracking-tight text-custom md:text-6xl">
+                    <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
                       {item.title}
                     </h1>
-                    <p className="mt-6 max-w-prose text-xl text-white lg:text-start lg:text-2xl">
+                    <p className="mt-6 max-w-prose text-xl lg:text-start lg:text-2xl">
                       {item.desc}
                     </p>
                     <div className="mt-6">
@@ -126,7 +129,8 @@ const Page = () => {
               autoPlay
               loop
               muted
-              className="h-full max-h-[calc(100vh-100px)] min-h-[450px] w-full rounded-md object-cover object-center"
+              className="h-full max-h-[calc(100vh-100px)] min-h-[450px] 
+              w-full rounded-md object-cover object-center"
             >
               <source src="/videos/e.mp4" type="video/mp4" />
             </video>
@@ -170,7 +174,7 @@ const Page = () => {
           </div>
         </MaxWidthWrapper>
 
-        <Carousel opts={{ loop: true, align: "start" }}>
+        <Carousel opts={{ loop: true, align: "start" }} className="px-2">
           <CarouselContent className="-ml-2 max-w-screen-2xl py-4">
             {DATA.map((data) =>
               data.featured.map((item) =>
@@ -206,7 +210,7 @@ const Page = () => {
                           </Link>
 
                           <div className="px-4">
-                            <div className="mb-2 mt-4 transition-all hover:text-custom lg:text-lg">
+                            <div className="hover:text-custom mb-2 mt-4 transition-all lg:text-lg">
                               <Link
                                 href={`${item.href}/${product_group?.kind}_${product.name}`}
                               >
@@ -227,7 +231,7 @@ const Page = () => {
               ),
             )}
           </CarouselContent>
-          <div className="absolute -top-2 right-0 mx-12">
+          <div className="absolute -top-2 right-2 mx-12">
             <CarouselPrevious />
             <CarouselNext />
           </div>
@@ -240,7 +244,7 @@ const Page = () => {
             <h2 className="text-2xl font-bold lg:text-3xl">Shop by world</h2>
           </div>
           <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
-            {HOME_GRID.map((item, index) => (
+            {BIKES_CATEGORY_LIST.map((item, index) => (
               <div key={index} className="transition-all hover:-translate-y-1">
                 <Link href={`/bikes/${item.title}`}>
                   <div className="relative">

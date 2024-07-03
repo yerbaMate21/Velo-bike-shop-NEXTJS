@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         "link-secondary":
-          "relative after:absolute after:bottom-0 inline-block after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-custom after:transition-all hover:text-custom hover:after:scale-x-100",
+          "relative after:absolute after:bottom-0 inline-block after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-all hover:after:scale-x-100",
       },
       size: {
         default: "h-10 px-4 py-2",

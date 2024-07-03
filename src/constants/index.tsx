@@ -1,40 +1,74 @@
 //nav
-export const NAV_ITEMS: { category: string; src: string }[] = [
+export const IMAGES_BY_CATEGORY: {
+  category: string;
+  src: string;
+  src_cat: string;
+}[] = [
   {
     category: "bikes",
     src: "/images/bikes.png",
+    src_cat: "/images/bike-cat.jpg",
   },
   {
     category: "components",
     src: "/images/components.jpg",
-  },
-  {
-    category: "road",
-    src: "/images/road.jpeg",
-  },
-  {
-    category: "gravel",
-    src: "/images/gravel.jpeg",
-  },
-  {
-    category: "mtb",
-    src: "/images/mtb.jpeg",
-  },
-  {
-    category: "e-bike",
-    src: "/images/e-bike.webp",
-  },
-  {
-    category: "framesets",
-    src: "/images/framesets.webp",
-  },
-  {
-    category: "wheels",
-    src: "/images/wheels.webp",
+    src_cat: "/images/gear-cat.webp",
   },
 ];
 
-// home
+export const IMAGES_BY_TYPE: { type: string; src: string; src_type: string }[] =
+  [
+    {
+      type: "road",
+      src: "/images/road.jpeg",
+      src_type: "/images/road-type.jpg",
+    },
+    {
+      type: "gravel",
+      src: "/images/gravel.jpeg",
+      src_type: "/images/gravel-type.jpg",
+    },
+    {
+      type: "mtb",
+      src: "/images/mtb.jpeg",
+      src_type: "/images/mtb-type.avif",
+    },
+    {
+      type: "e-bike",
+      src: "/images/e-bike.webp",
+      src_type: "/images/e-bike.webp",
+    },
+    {
+      type: "framesets",
+      src: "/images/framesets.webp",
+      src_type: "/images/framesets.webp",
+    },
+    {
+      type: "wheels",
+      src: "/images/wheels.webp",
+      src_type: "/images/wheels.webp",
+    },
+  ];
+
+export const BIKES_CATEGORY_LIST: { image: string; title: string }[] = [
+  {
+    image: "/images/road-bikes.webp",
+    title: "road",
+  },
+  {
+    image: "/images/gravel-bikes.webp",
+    title: "gravel",
+  },
+  {
+    image: "/images/mountain-bikes.jpg",
+    title: "mtb",
+  },
+  {
+    image: "/images/electric-bikes.jpg",
+    title: "e-bike",
+  },
+];
+
 export const HOME_CAROUSEL: {
   image: string;
   title: string;
@@ -88,34 +122,11 @@ export const HOME_MARQUEE: { image: string; desc: string }[] = [
   },
 ];
 
-export const HOME_GRID: { image: string; title: string }[] = [
-  {
-    image: "/images/road-bikes.webp",
-    title: "road",
-  },
-  {
-    image: "/images/gravel-bikes.webp",
-    title: "gravel",
-  },
-  {
-    image: "/images/mountain-bikes.jpg",
-    title: "mtb",
-  },
-  {
-    image: "/images/electric-bikes.jpg",
-    title: "e-bike",
-  },
-];
-
 // product page
 export const PRODUCT_FOOTER: { image: string; title: string }[] = [
   {
     image: "/images/ico-warranty.svg",
     title: "WARRANTY",
-  },
-  {
-    image: "/images/ico-false-frame.svg",
-    title: "FALSE FRAMES",
   },
   {
     image: "/images/ico-register-frame.svg",

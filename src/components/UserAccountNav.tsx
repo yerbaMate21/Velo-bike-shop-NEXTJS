@@ -54,7 +54,7 @@ const UserAccountNav = () => {
       ) : (
         <Link
           href="/sign-in"
-          className={`${buttonVariants({ variant: "ghost", size: "sm" })} text-base font-normal`}
+          className={buttonVariants({ variant: "ghost", size: "sm" })}
         >
           <User />
         </Link>

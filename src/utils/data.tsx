@@ -382,7 +382,7 @@ export const DATA = [
                 weight: 9.1,
                 speed: 85,
                 power: null,
-                trending: false,
+                trending: true,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSLR7AXS-24-41349-C-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/CheckpointSLR7AXS-24-41349-C-Alt1",
@@ -494,7 +494,7 @@ export const DATA = [
                 weight: 8.3,
                 speed: 30,
                 power: null,
-                trending: false,
+                trending: true,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/1e/de/74/1702026733/Crosshill%202.0%20-%20Lapierre%20MY24%20-%20Cover.png?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/a8/54/27/1702026734/Crosshill%202.0%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -698,7 +698,7 @@ export const DATA = [
                 weight: 10.2,
                 speed: 35,
                 power: null,
-                trending: true,
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/b5/1d/95/1691069341/LAPIERRE_MY23_OVERVOLT_AM_9.7.png?force_format=webp",
                 ],
@@ -717,7 +717,7 @@ export const DATA = [
                 weight: 10.5,
                 speed: 40,
                 power: null,
-                trending: false,
+                trending: true,
                 images: [
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR99XXAXS-24-41725-C-Portrait",
                   "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/SupercaliberSLR99XXAXS-24-41725-C-Alt1",
@@ -991,7 +991,7 @@ export const DATA = [
                 weight: 20.1,
                 speed: 45,
                 power: 290,
-                trending: true,
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/29/0d/6d/1691069244/LAPIERRE_MY23_OVERVOLT_HT_8.7_HIGH.png?force_format=webp",
                 ],
@@ -1003,7 +1003,7 @@ export const DATA = [
                 weight: 19.2,
                 speed: 30,
                 power: 200,
-                trending: true,
+                trending: false,
                 images: [
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/bd/75/0d/1705590816/LAPIERRE_MY24_E-Urban_3.5.png?force_format=webp",
                   "https://adfnjoxprq.cloudimg.io/v7/_lapierre_prod/media/0e/bb/df/1707230822/E-Urban%203.5%20-%20Lapierre%20MY24%20-%20View%20(2).jpeg?force_format=webp",
@@ -1224,32 +1224,6 @@ export const DATA = [
                   "https://enve.com/cdn/shop/files/SES_4.5_front_angle.jpg?v=1704989386&width=1800",
                 ],
               },
-              {
-                brand: "Enve",
-                name: "65",
-                id: uuidv4(),
-                price: "1 400",
-                weight: null,
-                speed: 90,
-                power: null,
-                trending: false,
-                images: [
-                  "https://enve.com/cdn/shop/products/Foundation65_Hero.png?v=1683741465&width=1800",
-                ],
-              },
-              {
-                brand: "Enve",
-                name: "SES-DISC-REAR",
-                id: uuidv4(),
-                price: "2 900",
-                weight: null,
-                speed: 85,
-                power: null,
-                trending: false,
-                images: [
-                  "https://enve.com/cdn/shop/files/SESDisc_Hero.png?v=1709231344&width=1800",
-                ],
-              },
             ],
           },
           {
@@ -1347,32 +1321,6 @@ export const DATA = [
                 trending: false,
                 images: [
                   "https://enve.com/cdn/shop/files/SES_3.4_front_angle.jpg?v=1704989297&width=1800",
-                ],
-              },
-              {
-                brand: "Enve",
-                name: "M640",
-                id: uuidv4(),
-                price: "2 500",
-                weight: null,
-                speed: 65,
-                power: null,
-                trending: false,
-                images: [
-                  "https://enve.com/cdn/shop/files/M630_Side-1024x683_3375a4b8-6260-4361-ade7-aa336c887802.jpg?v=1690914374&width=1800",
-                ],
-              },
-              {
-                brand: "Enve",
-                name: "M735",
-                id: uuidv4(),
-                price: "2 550",
-                weight: null,
-                speed: 70,
-                power: null,
-                trending: false,
-                images: [
-                  "https://enve.com/cdn/shop/files/M735_Side-1024x683_2f280ec1-359c-45d4-9af8-94e3dcc3930c.jpg?v=1690914420&width=1800",
                 ],
               },
             ],

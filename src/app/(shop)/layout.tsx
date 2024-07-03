@@ -11,7 +11,7 @@ export default function ProductsLayout({
   return (
     <div className="bg-muted">
       <Navbar />
-      <MaxWidthWrapper className="py-6 lg:py-12">
+      <MaxWidthWrapper className="py-4 lg:py-8">
         <div>{children}</div>
         <ProductFooter />
       </MaxWidthWrapper>

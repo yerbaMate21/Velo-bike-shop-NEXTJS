@@ -13,13 +13,14 @@ import { buttonVariants } from "../ui/button";
 import { useState } from "react";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
-import { NAV_ITEMS } from "@/constants";
+import { IMAGES_BY_CATEGORY } from "@/constants";
+import { IMAGES_BY_TYPE } from "@/constants";
 
 const NavItems = () => {
   const [catImage, setCatImage] = useState<string>("");
 
   const handleCatImage = (value: string) => {
-    NAV_ITEMS.map((item) => {
+    IMAGES_BY_CATEGORY.map((item) => {
       if (item.category === value) {
         setCatImage(item.src);
       }
@@ -27,8 +28,8 @@ const NavItems = () => {
   };
 
   const handleTypeImage = (value: string) => {
-    NAV_ITEMS.map((item) => {
-      if (item.category === value) {
+    IMAGES_BY_TYPE.map((item) => {
+      if (item.type === value) {
         setCatImage(item.src);
       }
     });
@@ -36,73 +37,89 @@ const NavItems = () => {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList className="gap-4">
+      <NavigationMenuList>
         {DATA.map((data) => (
           <div key={data.id}>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger
-                className="hover:bg-transparent
-              data-[state=open]:bg-transparent data-[state=open]:text-custom"
-                onMouseEnter={() => handleCatImage(data.value)}
-              >
-                <div className="mx-2 text-base font-medium">
-                  {data.category}
-                </div>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-muted">
-                <div
-                  className="m-8 grid h-full w-[800px] grid-cols-[25%_75%] 
-                rounded-md border-[1px] bg-white"
+            {data.category === "Bikes" && (
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  onMouseEnter={() => handleCatImage(data.value)}
                 >
-                  <div className="rounded-bl-md rounded-tl-md">
-                    {data.featured.map((item) => (
-                      <div key={item.id}>
-                        <div className="mx-4">
-                          <Link href={`/${data.value}/${item.value}`}>
-                            <div
-                              className={`${buttonVariants({
-                                variant: "link-secondary",
-                                size: "no-padding-x",
-                              })} w-full py-3`}
-                              onMouseEnter={() => handleTypeImage(item.value)}
-                            >
-                              <div className="w-full text-lg">{item.type}</div>
-                            </div>
-                          </Link>
-                          <Separator />
+                  <div className="mx-2 text-base font-medium">
+                    {data.category}
+                  </div>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-muted">
+                  <div
+                    className="m-8 grid h-full w-[760px] grid-cols-[20%_80%] 
+                rounded-md border-[1px] bg-white"
+                  >
+                    <div className="rounded-bl-md rounded-tl-md">
+                      {data.featured.map((item) => (
+                        <div key={item.id}>
+                          <div className="mx-4">
+                            <Link href={`/${data.value}/${item.value}`}>
+                              <div
+                                className={`${buttonVariants({
+                                  variant: "link-secondary",
+                                  size: "no-padding-x",
+                                })} w-full py-3`}
+                                onMouseEnter={() => handleTypeImage(item.value)}
+                              >
+                                <div className="w-full text-lg">
+                                  {item.type}
+                                </div>
+                              </div>
+                            </Link>
+                            <Separator />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="relative h-[340px] w-full border-l-[1px]">
+                      <Image
+                        src={catImage}
+                        fill
+                        objectFit="cover"
+                        alt="navitems-photo"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="text-center">
+                    <Link href={`/${data.value}`}>
+                      <div
+                        className={`${buttonVariants({
+                          variant: "link-secondary",
+                          size: "no-padding-x",
+                        })} mx-8 mb-8 `}
+                      >
+                        <div className="text-lg font-light">
+                          View all {data.value}
                         </div>
                       </div>
-                    ))}
+                    </Link>
                   </div>
-                  <div className="relative h-[340px] w-full border-l-[1px]">
-                    <Image
-                      src={catImage}
-                      fill
-                      objectFit="cover"
-                      alt="navitems-photo"
-                    />
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <Link href={`/${data.value}`}>
-                    <div
-                      className={`${buttonVariants({
-                        variant: "link-secondary",
-                        size: "no-padding-x",
-                      })} mx-8 mb-8 `}
-                    >
-                      <div className="text-base font-light">
-                        View all {data.value}
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            )}
           </div>
         ))}
-        <div className="px-4">
+
+        <div className="px-8">
+          <Link
+            href="/components"
+            className={buttonVariants({
+              variant: "link-secondary",
+              size: "no-padding-x",
+            })}
+          >
+            <div className="text-base font-medium">Components</div>
+          </Link>
+        </div>
+
+        <div className="px-8">
           <Link
             href="/blog"
             className={buttonVariants({

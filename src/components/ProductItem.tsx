@@ -1,6 +1,5 @@
 "use client";
 
-import { Product } from "@/app/(shop)/(products)/[category]/[categoryType]/[name]/page";
 import Image from "next/image";
 import {
   Carousel,
@@ -11,12 +10,13 @@ import {
 } from "./ui/carousel";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { Gauge, ZoomIn, SmartphoneCharging, X } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "./ui/dialog";
-import ImageZoom from "react-image-zooom";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
+import { Gauge, ZoomIn, SmartphoneCharging, X } from "lucide-react";
+import ImageZoom from "react-image-zooom";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import Product from "@/types";
 
 const ProductItem = ({ product }: { product: Product }) => {
   const multiImages: boolean = product.images.length > 1;
@@ -96,16 +96,18 @@ const ProductItem = ({ product }: { product: Product }) => {
               {product.weight && (
                 <div>Weight:&nbsp;{product.weight}&nbsp;kg</div>
               )}
-              {product.power && (
-                <div className="flex items-center gap-1 text-green-500">
-                  <SmartphoneCharging size={24} />
-                  &nbsp;{product.power}&nbsp;W
-                </div>
-              )}
               {product.speed && (
                 <div className="flex items-center gap-2">
+                  <div>Speed</div>
                   <Gauge size={24} />
                   <Progress value={product.speed} className="h-3 w-full" />
+                </div>
+              )}
+              {product.power && (
+                <div className="flex items-center gap-1 text-green-500">
+                  <div>Power</div>
+                  <SmartphoneCharging size={24} />
+                  &nbsp;{product.power}&nbsp;W
                 </div>
               )}
             </div>

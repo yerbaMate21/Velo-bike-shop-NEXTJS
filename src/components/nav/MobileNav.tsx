@@ -52,16 +52,33 @@ const MobileNav = () => {
                     className={`${isAnyCatOpen ? "h-0 -translate-x-[calc(100%+10rem)]" : "opacity-100"} 
                    grid duration-300 ease-out`}
                   >
-                    <div
-                      onClick={handleOpen}
-                      className={`${buttonVariants({ variant: "ghost" })} mr-4 cursor-pointer py-8`}
-                    >
-                      <div className="flex w-full items-center justify-between">
-                        <div className="text-lg">{data.category}</div>
-                        <ChevronRight size={20} />
-                      </div>
-                    </div>
+                    {data.category === "Bikes" ? (
+                      <>
+                        <div
+                          onClick={handleOpen}
+                          className={`${buttonVariants({ variant: "ghost" })} mr-4 cursor-pointer py-8`}
+                        >
+                          <div className="flex w-full items-center justify-between">
+                            <div className="text-lg">{data.category}</div>
+                            <ChevronRight size={20} />
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <Link
+                          href={`${data.category}`}
+                          className={`${buttonVariants({
+                            variant: "link-secondary",
+                            size: "no-padding-x",
+                          })} mx-4 py-2`}
+                        >
+                          <div className="w-full text-lg">{data.category}</div>
+                        </Link>
+                      </>
+                    )}
                   </div>
+
                   {data.featured?.map((product_type) => (
                     <div key={product_type.id}>
                       <div
@@ -73,7 +90,7 @@ const MobileNav = () => {
                           className={`${buttonVariants({
                             variant: "link-secondary",
                             size: "no-padding-x",
-                          })} mx-4 py-3`}
+                          })} mx-4 py-2`}
                         >
                           <div className="w-full text-lg">
                             {product_type.type}
@@ -112,7 +129,7 @@ const MobileNav = () => {
                   size: "no-padding-x",
                 })}`}
               >
-                <div className="text-base font-light">View all bikes</div>
+                <div className="text-lg font-light">View all bikes</div>
               </Link>
             </div>
           </div>

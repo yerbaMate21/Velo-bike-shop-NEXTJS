@@ -27,7 +27,7 @@ const Page = ({ params }: PageProps) => {
           (item) =>
             item.type === type && (
               <div>
-                <div className="relative mx-0 aspect-video max-h-[calc(100vh-120px)] w-full">
+                <div className="relative mx-0 aspect-video max-h-[calc(100vh-150px)] w-full">
                   <Image
                     src={item.src_type}
                     alt={`${item.type}-image`}

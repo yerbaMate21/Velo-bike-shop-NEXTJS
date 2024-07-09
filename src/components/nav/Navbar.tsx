@@ -30,42 +30,38 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`sticky z-50 text-sm shadow-md ${isSearchOpen && "top-0"}`}>
+    <div className="relative z-50 text-sm">
       <div className="w-full bg-white">
         <MaxWidthWrapper className="xl:px-20">
-          <div className="flex h-16 w-full justify-between bg-white">
+          <div
+            className={`flex h-16 w-full justify-between transition-all duration-300 
+            ${isSearchOpen ? "-z-50 opacity-0" : "opacity-100"}`}
+          >
             <div className="z-50 flex items-center leading-none">
               <MobileNav />
 
-              {!isSearchOpen && (
-                <Link href="/">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/images/bike.svg"
-                      width={50}
-                      height={50}
-                      alt="logo"
-                      className="mx-1 min-w-10"
-                    />
-                    <div className="hidden text-2xl font-medium text-slate-800 sm:block">
-                      Velo
-                    </div>
+              <Link href="/">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/bike.svg"
+                    width={50}
+                    height={50}
+                    alt="logo"
+                    className="mx-1 min-w-10"
+                  />
+                  <div className="hidden text-2xl font-medium text-slate-800 sm:block">
+                    Velo
                   </div>
-                </Link>
-              )}
+                </div>
+              </Link>
             </div>
 
-            <div
-              className={`hidden xl:flex
-              ${isSearchOpen ? "-z-50 opacity-0" : "opacity-100 duration-500"}`}
-            >
+            <div className="hidden xl:flex">
               <NavItems />
             </div>
 
             <div className="flex items-center">
-              <div
-                className={`${isSearchOpen ? "-z-50 opacity-0" : "opacity-100 duration-500"}`}
-              >
+              <div>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -77,14 +73,14 @@ const Navbar = () => {
                 <UserAccountNav />
               </div>
             </div>
-
-            <SearchProduct
-              isSearchOpen={isSearchOpen}
-              setIsSearchOpen={setIsSearchOpen}
-            />
           </div>
         </MaxWidthWrapper>
       </div>
+
+      <SearchProduct
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+      />
     </div>
   );
 };

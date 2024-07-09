@@ -22,7 +22,7 @@ const Page = ({ params }: PageProps) => {
         {IMAGES_BY_CATEGORY.map(
           (item) =>
             item.category === category && (
-              <div className="relative mx-0 aspect-video max-h-[calc(100vh-120px)] w-full">
+              <div className="relative mx-0 aspect-video max-h-[calc(100vh-150px)] w-full">
                 <Image
                   src={item.src_cat}
                   alt={`${item.category}-image`}

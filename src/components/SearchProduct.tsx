@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
 import { Search, X } from "lucide-react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useScroll } from "@/hooks/useScroll";
 import { DATA } from "@/utils/data";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 import FadeBackground from "./FadeBackground";
 
 interface Props {
@@ -164,11 +164,14 @@ const SearchProduct = ({ isSearchOpen, setIsSearchOpen }: Props) => {
                       className={`${buttonVariants({
                         variant: "link-secondary",
                         size: "no-padding-x",
-                      })} my-0.5 cursor-pointer`}
+                      })} my-0.5 w-full cursor-pointer`}
                     >
-                      <div className="flex gap-2 text-base font-light">
-                        <div>{item.brand}</div>
-                        <div>{item.title}</div>
+                      <div className="flex w-full justify-between">
+                        <div className="flex gap-2 text-base font-light">
+                          <div>{item.brand}</div>
+                          <div>{item.title}</div>
+                        </div>
+                        <div className="font-light">{item.type}</div>
                       </div>
                     </div>
                   </div>

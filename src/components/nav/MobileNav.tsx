@@ -67,7 +67,7 @@ const MobileNav = () => {
                     ) : (
                       <>
                         <Link
-                          href={`${data.category}`}
+                          href={`${data.value}`}
                           className={`${buttonVariants({
                             variant: "link-secondary",
                             size: "no-padding-x",

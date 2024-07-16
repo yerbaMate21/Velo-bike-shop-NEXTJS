@@ -1,6 +1,11 @@
 "use  client";
 
 import { DATA } from "@/utils/data";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { buttonVariants } from "../ui/button";
+import { Separator } from "../ui/separator";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,11 +13,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
-import Link from "next/link";
-import { buttonVariants } from "../ui/button";
-import { useState } from "react";
-import Image from "next/image";
-import { Separator } from "../ui/separator";
 import { IMAGES_BY_CATEGORY } from "@/constants";
 import { IMAGES_BY_TYPE } from "@/constants";
 
@@ -49,10 +49,10 @@ const NavItems = () => {
                     {data.category}
                   </div>
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-muted">
+                <NavigationMenuContent>
                   <div
                     className="m-8 grid h-full w-[760px] grid-cols-[20%_80%] 
-                rounded-md border-[1px] bg-white"
+                  rounded-md border-[1px]"
                   >
                     <div className="rounded-bl-md rounded-tl-md">
                       {data.featured.map((item) => (

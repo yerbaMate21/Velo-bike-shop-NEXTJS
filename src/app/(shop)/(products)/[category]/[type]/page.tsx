@@ -27,22 +27,18 @@ const Page = ({ params }: PageProps) => {
           (item) =>
             item.type === type && (
               <div>
+                <div
+                  className="flex items-center justify-center py-6 text-5xl font-medium
+                  uppercase tracking-tight text-black lg:py-10 lg:text-7xl"
+                >
+                  {type}
+                </div>
                 <div className="relative mx-0 aspect-video max-h-[calc(100vh-150px)] w-full">
                   <Image
                     src={item.src_type}
                     alt={`${item.type}-image`}
                     fill
                     className="rounded-md object-cover object-center"
-                  />
-                  <div
-                    className="absolute left-0 top-0 z-20 flex h-full w-full items-center 
-                justify-center text-4xl font-bold uppercase text-white md:text-6xl"
-                  >
-                    {type}
-                  </div>
-                  <div
-                    className="from-0 absolute inset-0 left-0 top-0 
-                z-10 h-full w-full rounded-md bg-gradient-to-t from-black/75"
                   />
                 </div>
               </div>

@@ -9,7 +9,7 @@ export default function ProductsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-muted">
+    <div>
       <Navbar />
       <MaxWidthWrapper className="py-4 lg:py-8">
         <div>{children}</div>
